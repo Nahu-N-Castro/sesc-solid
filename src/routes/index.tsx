@@ -82,17 +82,6 @@ export default function Home() {
       </section>
 
 
-      {/* <section class="h-full flex flex-col justify-center items-center py-32 relative">
-        <h1 class="font-bold z-10 pb-20 text-5xl text-white cursor-default">Nuestras Experiencias</h1>
-
-        <div class="w-full max-w-screen-2xl mx-auto">
-          <Carousel autoSlide autoSlideInterval={4000}>
-            {slides.map((s) =>
-              <img src={s} />
-            )}
-          </Carousel>
-        </div>
-      </section> */}
 
       <section class="h-full flex flex-col justify-center items-center py-32 relative">
         <img
@@ -102,9 +91,6 @@ export default function Home() {
         />
 
         <h1
-          data-aos="fade-left"
-          data-aos-duration="500"
-          data-aos-offset="400"
           class="font-bold z-10 pb-20 text-5xl text-white cursor-default">Voces de Satisfacción</h1>
         <div class="w-full flex flex-col sm:flex-row gap-10 px-10 justify-center z-10">
           <For each={testimonials}>
