@@ -6,7 +6,7 @@ export default function Footer() {
         <img
           class="w-36 h-36 rounded-full my-auto"
           alt="Logo SESC"
-          src="/public/logo.png" />
+          src="logo.png" />
         {/* <div
           class="flex flex-col lg:flex-row gap-8 lg:gap-16 w-full justify-center px-5">
           <a
