@@ -61,7 +61,7 @@ export default function Nav() {
         <a href="#home">
           <img
             class="w-16 h-16 rounded-full drop-shadow shadow-black"
-            src="/public/logo-orange.png"
+            src="logo-orange.png"
             alt="logo"
           />
         </a>
