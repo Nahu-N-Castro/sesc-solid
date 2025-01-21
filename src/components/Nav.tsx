@@ -119,24 +119,6 @@ export default function Nav() {
               </button>
             </div>
 
-            {/* <button onClick={toggleMenu} class="relative transition-transform duration-300">
-              <Switch>
-                <Match when={!open()}>
-                  <img
-                    src="/public/menu.png"
-                    class="w-8 transition-transform duration-300 ease-in-out transform rotate-0"
-                    alt="menu"
-                  />
-                </Match>
-                <Match when={open()}>
-                  <img
-                    src="/public/close.png"
-                    class="w-8 transition-transform duration-300 ease-in-out transform rotate-45  animate-spin"
-                    alt="close"
-                  />
-                </Match>
-              </Switch>
-            </button> */}
             <div
               id="miNavbarOption"
               class={`absolute z-20 w-full h-screen py-5 right-0 top-[10vh] text-xl bg-black/90 backdrop-blur-md transition-all ${open() ? "block" : "hidden"
