@@ -25,19 +25,19 @@ export const servicesMap = new Map<ServicesType, ServiceDetail[]>([
         icon: "industrial.jpg",
         title: "Industrial",
         description:
-          " Proyectos de Instalaciones y Montajes  Diseño y Armado de Tableros BT  Luminarias  Instalación de red ETH y tensión estabilizada UPS para oficinas  Reparaciones y Reformas de instalaciones  Planes MTO Preventivos y Predictivos  Ahorro de Energía  Automatizaciones y Programación.  Cámaras y cercos eléctricos perimetrales  Certificaciones hasta 10KVA",
+          " Nos especializamos en una amplia gama de servicios eléctricos y de automatización, incluyendo el diseño y montaje de instalaciones, armado de tableros BT, instalación de luminarias, redes Ethernet y sistemas de tensión estabilizada UPS para oficinas. También realizamos reparaciones y reformas de instalaciones, desarrollamos planes de mantenimiento preventivo y predictivo (MTO), optimización para el ahorro de energía, automatizaciones y programación. Además, ofrecemos instalación de cámaras de seguridad, cercos eléctricos perimetrales y certificaciones eléctricas de hasta 10KVA.",
       },
       {
         icon: "domiciliaria.jpg",
         title: "Residencial",
         description:
-          " Proyectos de Instalaciones y Montajes  Diseño y Armado de Tableros BT  Luminarias  Cámaras de Seguridad  Instalación de red ETH y tensión estabilizada UPS para oficinas  Reparaciones y Reformas de instalaciones  Ahorro de Energía  Automatizaciones  Certificaciones hasta 10KVA",
+          " Ofrecemos una amplia variedad de servicios en instalaciones eléctricas y automatización, incluyendo proyectos de instalaciones y montajes, diseño y armado de tableros BT, instalación de luminarias y cámaras de seguridad. También realizamos la instalación de redes Ethernet y sistemas de tensión estabilizada UPS para oficinas, reparaciones y reformas de instalaciones, optimización para el ahorro de energía, automatizaciones y certificaciones eléctricas de hasta 10KVA.",
       },
       {
         icon: "comercial.jpg",
         title: "Comercial",
         description:
-          " Proyectos de Instalaciones  Diseño y Armado de Tableros BT  Luminarias  Cámaras de Seguridad  Cercos Eléctricos  Reparaciones y Reformas de instalaciones Ahorro de Energía. Colocación de pilares Monofásicos y Trifásicos Certificaciones hasta 10KVA",
+          " Brindamos soluciones integrales en instalaciones eléctricas, incluyendo proyectos de instalaciones, diseño y armado de tableros BT, instalación de luminarias, cámaras de seguridad y cercos eléctricos. También realizamos reparaciones y reformas de instalaciones, optimización para el ahorro de energía, colocación de pilares monofásicos y trifásicos, además de certificaciones eléctricas de hasta 10KVA.",
       },
     ],
   ],
