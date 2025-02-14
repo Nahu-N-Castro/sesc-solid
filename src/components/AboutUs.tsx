@@ -18,7 +18,7 @@ export default function AboutUs() {
         <div
           data-aos="fade"
           class="w-full flex flex-col h-full relative drop-shadow-xl transition-all justify-center items-center text-zinc-100 font-medium px-4 sm:px-52 cursor-default">
-          <h1 class="font-bold mb-20 text-5xl ">Sobre Nosostros</h1>
+          <h1 class="font-bold mb-20 text-5xl ">Sobre Nosotros</h1>
           <div class="flex flex-col sm:flex-row justify-between gap-10">
             <div class="flex flex-col text-start sm:w-[50%]">
               <p class="drop-shadow-md ">Somos una empresa de servicios eléctricos creada y con crecimiento en
