@@ -31,6 +31,10 @@ module.exports = {
           from: { transform: "translateX(-100%)" },
           to: { transform: "translateX(0)" },
         },
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(8px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "slide-left": "slide-left 30s linear infinite",
@@ -39,6 +43,7 @@ module.exports = {
         "fade-in-content": "fade-in-content 0.5s ease-in-out forwards",
         "fade-out-backdrop": "fade-out-backdrop 0.3s ease-in-out forwards",
         "fade-out-content": "fade-out-content 0.3s ease-in-out forwards",
+        "fade-in-up": "fade-in-up 0.4s ease-out forwards",
       },
     },
   },
@@ -47,11 +52,14 @@ module.exports = {
     function ({ addUtilities }) {
       addUtilities({
         ".scrollbar-hidden": {
-          "scrollbar-width": "none", // Oculta el scrollbar en Firefox
-          "-ms-overflow-style": "none", // Oculta el scrollbar en IE y Edge
+          "scrollbar-width": "none",
+          "-ms-overflow-style": "none",
         },
         ".scrollbar-hidden::-webkit-scrollbar": {
-          display: "none", // Oculta el scrollbar en Chrome y Safari
+          display: "none",
+        },
+        ".perspective-1000": {
+          perspective: "1000px",
         },
       });
     },

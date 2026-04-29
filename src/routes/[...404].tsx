@@ -2,24 +2,18 @@ import { A } from "@solidjs/router";
 
 export default function NotFound() {
   return (
-    <main class="text-center mx-auto text-gray-700 p-4">
-      <h1 class="max-6-xs text-6xl text-sky-700 font-thin uppercase my-16">Not Found</h1>
-      <p class="mt-8">
-        Visit{" "}
-        <a href="https://solidjs.com" target="_blank" class="text-sky-600 hover:underline">
-          solidjs.com
-        </a>{" "}
-        to learn how to build Solid apps.
+    <main class="flex flex-col items-center justify-center min-h-screen text-center mx-auto bg-zinc-800 text-white p-8">
+      <h1 class="text-7xl sm:text-9xl font-bold text-orange-500 mb-6">404</h1>
+      <h2 class="text-2xl sm:text-4xl font-semibold mb-4">Página no encontrada</h2>
+      <p class="text-stone-300 mb-10 max-w-md">
+        La página que estás buscando no existe o fue movida. Volvé al inicio para conocer nuestros servicios eléctricos.
       </p>
-      <p class="my-4">
-        <A href="/" class="text-sky-600 hover:underline">
-          Home
-        </A>
-        {" - "}
-        <A href="/about" class="text-sky-600 hover:underline">
-          About Page
-        </A>
-      </p>
+      <A
+        href="/"
+        class="bg-orange-500 hover:bg-white hover:text-orange-500 transition-all px-6 py-3 rounded-md font-bold uppercase"
+      >
+        Volver al inicio
+      </A>
     </main>
   );
 }

@@ -22,19 +22,19 @@ export const servicesMap = new Map<ServicesType, ServiceDetail[]>([
     "Electricidad Integral",
     [
       {
-        icon: "industrial.jpg",
+        icon: "industrial.webp",
         title: "Industrial",
         description:
           " Nos especializamos en una amplia gama de servicios eléctricos y de automatización, incluyendo el diseño y montaje de instalaciones, armado de tableros BT, instalación de luminarias, redes Ethernet y sistemas de tensión estabilizada UPS para oficinas. También realizamos reparaciones y reformas de instalaciones, desarrollamos planes de mantenimiento preventivo y predictivo (MTO), optimización para el ahorro de energía, automatizaciones y programación. Además, ofrecemos instalación de cámaras de seguridad, cercos eléctricos perimetrales y certificaciones eléctricas de hasta 10KVA.",
       },
       {
-        icon: "domiciliaria.jpg",
+        icon: "domiciliaria.webp",
         title: "Residencial",
         description:
           " Ofrecemos una amplia variedad de servicios en instalaciones eléctricas y automatización, incluyendo proyectos de instalaciones y montajes, diseño y armado de tableros BT, instalación de luminarias y cámaras de seguridad. También realizamos la instalación de redes Ethernet y sistemas de tensión estabilizada UPS para oficinas, reparaciones y reformas de instalaciones, optimización para el ahorro de energía, automatizaciones y certificaciones eléctricas de hasta 10KVA.",
       },
       {
-        icon: "comercial.jpg",
+        icon: "comercial.webp",
         title: "Comercial",
         description:
           " Brindamos soluciones integrales en instalaciones eléctricas, incluyendo proyectos de instalaciones, diseño y armado de tableros BT, instalación de luminarias, cámaras de seguridad y cercos eléctricos. También realizamos reparaciones y reformas de instalaciones, optimización para el ahorro de energía, colocación de pilares monofásicos y trifásicos, además de certificaciones eléctricas de hasta 10KVA.",
@@ -45,19 +45,19 @@ export const servicesMap = new Map<ServicesType, ServiceDetail[]>([
     "Seguridad Electrónica",
     [
       {
-        icon: "camaras.jpg",
+        icon: "camaras.webp",
         title: "Cámaras de Seguridad",
         description:
           " Nos dedicamos al asesoramiento, diseño, provisión, venta, instalación, soporte técnico y mantenimiento  de sistemas de video vigilancia. Instalamos cámaras de vigilancia analógicas con DVR y cámaras de seguridad IP con NVR. De la misma manera que un arquitecto diseña una casa, nosotros diseñamos sistemas de video vigilancia. Atendemos hogares, domicilios particulares, negocios, comercios, industrias y sector público. Solo utilizamos accesorios, equipamiento y cámaras de marcas reconocidas, homologadas y certificadas bajo normas internacionales. La gran mayoría de nuestros sistemas de cámaras de video vigilancia los instalamos con equipos y cámaras de seguridad Dahua y con equipos y cámaras de seguridad Hikvision, entre otras marcas líderes en el mercado",
       },
       {
-        icon: "alarma.jpg",
+        icon: "alarma.webp",
         title: "Alarmas",
         description:
           "En los tiempos actuales, donde la inseguridad es una realidad que golpea la tranquilidad y el día a día de  las personas, instalar alarmas en casas y negocios se vuelve clave para estar bien preparados. SESC posee  un servicio profesional de primera calidad, el cual garantiza la mejor protección en tiempo real para sus  clientes.  Instalar alarmas presenta grandes variaciones de acuerdo al tipo de sistema y las necesidades específicas  de cada cliente. En general, el proceso de instalar alarma en casa o negocios implica una evaluación de  seguridad, en la cual un profesional determina cuáles son los puntos específicos que se deben proteger.  Luego, en base a este, se eligen los componentes que serán necesarios para el sistema.  Una vez establecido ello, se realiza la instalación.",
       },
       {
-        icon: "cerco.jpg",
+        icon: "cerco.webp",
         title: "Cerco Eléctrico",
         description:
           "Existen muchos sistemas de detección de intrusos, sin embargo, la experiencia ha demostrado que el Cerco Eléctrico Perimetral es el mejor sistema a instalar por ser el único que permite detectar e impedir el ingreso de delincuentes antes de que estén dentro de su propiedad. Es una barrera física y clara para disuadir al intruso, resaltada por la utilización de cartelería de advertencia. La visualización del cerco y los golpes eléctricos son suficientes para evitar el ingreso de delincuentes a su propiedad. A diferencia de las alarmas convencionales que se activan una vez que el intruso esta adentro, los cercos eléctricos constan de un tendido de alambre de aluminio de 6 hilos según el lugar a proteger, mas un electrificador alarma que transmite pulsos de alto voltaje pero de bajo amperaje, que al ser tocado genera un doloroso choque eléctrico inmovilizando al intruso, NO LETAL.",
@@ -68,13 +68,13 @@ export const servicesMap = new Map<ServicesType, ServiceDetail[]>([
     "Energias Renovables",
     [
       {
-        icon: "panel.png",
+        icon: "panel.webp",
         title: "Panel Solar",
         description:
           "Los paneles solares son un sistema de autoabastecimiento energético con una vida útil de unos 25-30 años y suponen un importante desembolso en un primer término. Por ello, su instalación no debe tomarse a la ligera. Es necesario cuidar todos los componentes que intervienen en la estructura, desde las células fotovoltaicas a los soportes sobre los cuales se instalan estas placas, y siempre conviene confiar en empresas especializadas que ya hayan demostrado su valía a través de su experiencia.",
       },
       {
-        icon: "panel-2.png",
+        icon: "panel-2.webp",
         title: " ",
         description:
           "Para asegurarse de contar con una instalación eficiente, que se amortice en un plazo razonable y que sea segura, hay que tomar en cuenta una serie de factores. Contamos con asesoría técnica especializada con ingenieros experimentados en el equipamiento y las arquitecturas de instalación. Instalaciones OffGrid, OnGrid e Hibridas",
@@ -85,19 +85,19 @@ export const servicesMap = new Map<ServicesType, ServiceDetail[]>([
     "Climatización",
     [
       {
-        icon: "bomba-calor-1.jpg",
+        icon: "bomba-calor-1.webp",
         title: "Bomba de Calor",
         description:
           "El principio de funcionamiento de cualquier bomba de calor por aerotermia se basa en  el aprovechamiento gratuito e inagotable de la energía contenida en el aire, mediante el cambio de características de un fluido refrigerante dentro de un ciclo termodinámico  La principal diferencia es que el calentamiento del agua de la piscina se realiza a través de un intercambiador de titanio(para soportar sin problemas las características del  agua clorada o tratada con sales habitual en las piscinas), hablando siempre de unidades monoblock para instalación exterior que instalan todos los elementos en un mismo equipo",
       },
       {
-        icon: "bomba-calor-2.jpg",
+        icon: "bomba-calor-2.webp",
         title: "",
         description:
           "Nuestras bombas de calor consumen menos energía que otras del mercado gracias a su tecnología tipo INVERTER. Contamos con instaladores profesionales para realizar los proyectos a medida de nuestros clientes.",
       },
       {
-        icon: "bomba-calor-3.png",
+        icon: "bomba-calor-3.webp",
         title: "",
         description: "Calefacción para espacios grandes.",
       },

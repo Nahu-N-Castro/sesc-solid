@@ -18,7 +18,7 @@ export default function AboutUs() {
         <div
           data-aos="fade"
           class="w-full flex flex-col h-full relative drop-shadow-xl transition-all justify-center items-center text-zinc-100 font-medium px-4 sm:px-52 cursor-default">
-          <h1 class="font-bold mb-20 text-5xl ">Sobre Nosotros</h1>
+          <h2 class="font-bold mb-20 text-5xl ">Sobre Nosotros</h2>
           <div class="flex flex-col sm:flex-row justify-between gap-10">
             <div class="flex flex-col text-start sm:w-[50%]">
               <p class="drop-shadow-md ">Somos una empresa de servicios eléctricos creada y con crecimiento en
@@ -53,18 +53,18 @@ export default function AboutUs() {
       <Show when={showPopup()}>
         <PopUp onClose={handleShow}>
           <div class="flex flex-col gap-4 bg-background-light sm:w-[65rem] shadow-lg rounded-2xl p-4 sm:p-6 xl:p-10 bg-white text-start">
-            <h1 class="text-xl font-bold">
+            <h3 class="text-xl font-bold">
               Somos una empresa de servicios eléctricos creada y con crecimiento en plena crisis económica, formada por profesionales con más de 20 años de experiencia.
-            </h1>
-            <h2 class="text-lg">
+            </h3>
+            <p class="text-lg">
               Hemos adquirido nuestra experiencia participando íntegramente en la organización y ejecución de proyectos de gran relevancia como centros comerciales, plantas de producción automotriz y de alimentos, PYMES, comercios, edificios residenciales y comerciales, además de casas con instalaciones de todos los tamaños. Siempre atendemos y priorizamos la calidad y atención al cliente que deseamos poner a su servicio en todo su ámbito.
-            </h2>
-            <h5 class="text-base">
+            </p>
+            <p class="text-base">
               Nuestro propósito es ser una empresa de servicios electrointegral reconocida como líder en el sector eléctrico, en el mantenimiento de instalaciones eléctricas, y en la elaboración y ejecución de proyectos de electricidad y automatismos.
               <br />
               <br />
               Nos enfocamos en ofrecer un servicio de atención y calidad adaptado a las necesidades de nuestros clientes, con profesionalismo como prioridad. Esto implica una mejora continua hacia la excelencia, comenzando con una exhaustiva selección de empleados y proveedores que cumplan con nuestros estándares y se mantengan en el tiempo.
-            </h5>
+            </p>
             <div>
               <h3 class="text-lg font-semibold">Ética - Hacer lo correcto.</h3>
               <p>Actuamos con honestidad e integridad. Somos transparentes y justos, y cumplimos con nuestros compromisos.</p>
