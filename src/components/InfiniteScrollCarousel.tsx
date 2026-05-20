@@ -1,12 +1,21 @@
 import { For } from "solid-js";
 
 const brands = [
-  { src: "brands/cocacola.png", alt: "Coca Cola Andina" },
-  { src: "brands/comau.png", alt: "Comau" },
-  { src: "brands/crayon.jpg", alt: "Crayon" },
-  { src: "brands/fiat.png", alt: "Fiat" },
-  { src: "brands/mgi.jpg", alt: "MGI Courtier" },
-  { src: "brands/otonello.png", alt: "Otonello" },
+  { src: "brands/cocacola.webp", alt: "Coca Cola Andina" },
+  { src: "brands/comau.webp", alt: "Comau" },
+  { src: "brands/crayon.webp", alt: "Crayon" },
+  { src: "brands/fiat.webp", alt: "Fiat" },
+  { src: "brands/mgi.webp", alt: "MGI Courtier" },
+  { src: "brands/otonello.webp", alt: "Otonello" },
+  { src: "brands/audoor.webp", alt: "Audoor" },
+  { src: "brands/autocity.webp", alt: "Autocity" },
+  { src: "brands/jeep.webp", alt: "Jeep" },
+  { src: "brands/motcor.webp", alt: "Motcor" },
+  { src: "brands/nissan.webp", alt: "Nissan" },
+  { src: "brands/raomed.webp", alt: "Raomed" },
+  { src: "brands/cars/renault.webp", alt: "Renault" },
+  { src: "brands/toyota.webp", alt: "Toyota" },
+  { src: "brands/royal-enfield.webp", alt: "Royal Enfield" },
 ];
 
 function Track(props: { ariaHidden: boolean }) {
@@ -15,7 +24,7 @@ function Track(props: { ariaHidden: boolean }) {
       <For each={brands}>
         {(brand) => (
           <img
-            class="mx-10 inline h-20 hover:scale-110 transition-transform duration-500"
+            class="mx-6 sm:mx-10 inline h-12 sm:h-16 lg:h-20 hover:scale-110 transition-transform duration-500"
             src={brand.src}
             alt={`Cliente: ${brand.alt}`}
             loading="lazy"

@@ -6,7 +6,7 @@ const labelToSlug: Record<string, string> = {
   "Electricidad Integral": "electricidad",
   "Seguridad Electrónica": "seguridad-electronica",
   "Energias Renovables": "energia-solar",
-  "Climatización": "climatizacion",
+  "Movilidad Eléctrica": "movilidad-electrica",
 };
 
 export default function ServiceItem(props: { service: ServiceDetail[], label: string, index: number }) {
@@ -31,11 +31,11 @@ export default function ServiceItem(props: { service: ServiceDetail[], label: st
       data-aos-duration="500"
       data-aos-delay={`${props.index}00`}
       data-aos-easing="ease-in-sine"
-      class="relative flex h-full flex-col gap-5 items-center rounded-xl shadow-md cursor-pointer group"
+      class="relative flex h-full flex-col gap-5 items-center rounded-xl shadow-md cursor-pointer group w-full"
       aria-label={`Ver detalles de ${props.label}`}
     >
       <div
-        class={`w-80 h-[32rem] relative transition-all duration-500 rounded-lg ${isFading() ? "brightness-0" : "brightness-100"}`}
+        class={`w-full h-72 sm:h-80 md:h-72 lg:h-[26rem] xl:h-[32rem] relative transition-all duration-500 rounded-lg ${isFading() ? "brightness-0" : "brightness-100"}`}
       >
         <img
           class="w-full h-full object-cover brightness-50 group-hover:brightness-90 group-hover:scale-105 transition-all duration-500 rounded-xl"
@@ -47,13 +47,13 @@ export default function ServiceItem(props: { service: ServiceDetail[], label: st
         />
       </div>
 
-      <h3 class="w-72 absolute top-10 text-white text-pretty font-medium text-3xl uppercase tracking-wide group-hover:scale-110 transition-transform duration-500">
+      <h3 class="w-[85%] absolute top-8 lg:top-10 text-white text-pretty font-medium text-2xl lg:text-2xl xl:text-3xl uppercase tracking-wide group-hover:scale-110 transition-transform duration-500 text-center">
         {props.label}
       </h3>
 
       <span
         aria-hidden="true"
-        class="absolute bottom-5 opacity-0 translate-y-5 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-in-out bg-orange-500 text-white font-medium flex items-center px-6 py-2 rounded-xl gap-2 text-xl"
+        class="absolute bottom-5 opacity-0 translate-y-5 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-in-out bg-orange-500 text-white font-medium flex items-center px-5 lg:px-6 py-2 rounded-xl gap-2 text-base lg:text-lg xl:text-xl"
       >
         Ver Más
         <svg

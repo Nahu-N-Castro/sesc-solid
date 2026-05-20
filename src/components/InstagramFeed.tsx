@@ -76,7 +76,7 @@ export default function InstagramFeed() {
 
   return (
     <section
-      class="relative bg-gradient-to-b from-zinc-900 to-zinc-800 py-24 px-6 sm:px-16 overflow-hidden"
+      class="relative bg-gradient-to-b from-zinc-900 to-zinc-800 py-16 lg:py-24 px-4 sm:px-10 lg:px-16 overflow-hidden"
       aria-labelledby="instagram-heading"
     >
       <div class="max-w-6xl mx-auto flex flex-col items-center">
@@ -85,19 +85,19 @@ export default function InstagramFeed() {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            class="w-9 h-9 text-orange-500"
+            class="w-7 h-7 sm:w-9 sm:h-9 text-orange-500"
             aria-hidden="true"
           >
             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
           </svg>
           <h2
             id="instagram-heading"
-            class="text-4xl sm:text-5xl text-white font-bold text-center"
+            class="text-3xl sm:text-4xl lg:text-5xl text-white font-bold text-center"
           >
             Seguinos en Instagram
           </h2>
         </div>
-        <p class="text-zinc-400 text-center mb-12 max-w-2xl">
+        <p class="text-zinc-400 text-center mb-10 lg:mb-12 max-w-2xl">
           Mirá nuestros últimos trabajos en{" "}
           <a
             href={INSTAGRAM_URL}
@@ -110,7 +110,7 @@ export default function InstagramFeed() {
         </p>
 
         <div
-          class="relative w-full flex items-center justify-center h-[700px] sm:h-[760px] perspective-1000"
+          class="relative w-full flex items-center justify-center h-[560px] sm:h-[680px] lg:h-[740px] perspective-1000"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
@@ -118,7 +118,7 @@ export default function InstagramFeed() {
             type="button"
             onClick={prev}
             aria-label="Publicación anterior"
-            class="absolute left-0 sm:left-4 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-orange-500 text-white backdrop-blur-md border border-white/20 flex items-center justify-center transition-all hover:scale-110"
+            class="absolute left-1 sm:left-4 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-orange-500 text-white backdrop-blur-md border border-white/20 flex items-center justify-center transition-all hover:scale-110"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true">
               <polyline points="15 18 9 12 15 6" />
@@ -128,7 +128,7 @@ export default function InstagramFeed() {
             type="button"
             onClick={next}
             aria-label="Siguiente publicación"
-            class="absolute right-0 sm:right-4 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-orange-500 text-white backdrop-blur-md border border-white/20 flex items-center justify-center transition-all hover:scale-110"
+            class="absolute right-1 sm:right-4 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-orange-500 text-white backdrop-blur-md border border-white/20 flex items-center justify-center transition-all hover:scale-110"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true">
               <polyline points="9 18 15 12 9 6" />
@@ -173,7 +173,7 @@ export default function InstagramFeed() {
                         aria-label={`Ver ${post.caption} en Instagram`}
                         class="block"
                       >
-                        <article class="bg-white rounded-2xl overflow-hidden shadow-2xl w-[320px] sm:w-[380px]">
+                        <article class="bg-white rounded-2xl overflow-hidden shadow-2xl w-[260px] sm:w-[340px] lg:w-[380px]">
                           <header class="flex items-center gap-3 px-4 py-3 border-b border-zinc-100">
                             <div class="w-9 h-9 rounded-full p-[2px] bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
                               <div class="w-full h-full rounded-full bg-white p-[2px]">

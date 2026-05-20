@@ -1,7 +1,9 @@
 import { For } from "solid-js";
 
-const row1 = Array.from({ length: 17 }, (_, i) => i + 1);
-const row2 = Array.from({ length: 17 }, (_, i) => i + 18);
+const TOTAL_JOBS = 60;
+const HALF = Math.ceil(TOTAL_JOBS / 2);
+const row1 = Array.from({ length: HALF }, (_, i) => i + 1);
+const row2 = Array.from({ length: TOTAL_JOBS - HALF }, (_, i) => i + HALF + 1);
 
 function Track(props: { ids: number[] }) {
   return (
@@ -9,7 +11,7 @@ function Track(props: { ids: number[] }) {
       <For each={props.ids}>
         {(id) => (
           <img
-            class="mx-4 rounded-lg inline h-96 hover:scale-110 transition-transform duration-500"
+            class="mx-2 sm:mx-4 rounded-lg inline h-56 sm:h-72 lg:h-96 hover:scale-110 transition-transform duration-500"
             src={`jobs/${id}.webp`}
             alt={`Trabajo de instalación eléctrica realizado por SESC #${id}`}
             loading="lazy"

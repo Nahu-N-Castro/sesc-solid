@@ -8,6 +8,7 @@ import Footer from "~/components/Footer";
 import GoogleRating from "~/components/GoogleRating";
 import InfiniteScrollCarousel from "~/components/InfiniteScrollCarousel";
 import InstagramFeed from "~/components/InstagramFeed";
+import JoinTeam from "~/components/JoinTeam";
 import Process from "~/components/Process";
 import ScrollCarousel from "~/components/ScrollCarousel";
 import ServiceItem from "~/components/ServiceItem";
@@ -56,12 +57,12 @@ export default function Home() {
 
         <div class="absolute inset-0 bg-gradient-to-t from-zinc-800 to-transparent"></div>
 
-        <div class="sm:w-[80%] h-full sm:h-[50%] px-8 z-10 flex items-start justify-center flex-col text-white gap-8">
-          <h1 class="sm:w-[60%] text-4xl sm:text-7xl font-bold text-left">Servicios Eléctricos Integrales en Córdoba</h1>
-          <p class="text-lg sm:w-[60%] sm:text-2xl text-left text-balance tracking-widest">Más de 20 Años de Experiencia Profesionales en Proyectos Eléctricos de Alta Relevancia</p>
+        <div class="w-full sm:w-[90%] lg:w-[85%] xl:w-[80%] h-auto sm:h-[55%] px-6 sm:px-8 z-10 flex items-start justify-center flex-col text-white gap-5 sm:gap-6 lg:gap-8">
+          <h1 class="w-full sm:w-[70%] lg:w-[60%] text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-left leading-tight">Servicios Eléctricos Integrales en Córdoba</h1>
+          <p class="text-base sm:text-xl lg:text-2xl w-full sm:w-[70%] lg:w-[60%] text-left text-balance tracking-wider sm:tracking-widest">Más de 20 Años de Experiencia Profesionales en Proyectos Eléctricos de Alta Relevancia</p>
           <a
             href="#targetContact"
-            class="flex my-6 uppercase font-semibold text-lg sm:text-xl justify-center items-center bg-orange-500 px-6 py-3 sm:py-5 rounded-md hover:bg-white hover:text-orange-500 transition-all duration-300"
+            class="flex my-4 lg:my-6 uppercase font-semibold text-lg sm:text-xl justify-center items-center bg-orange-500 px-6 py-3 lg:py-5 rounded-md hover:bg-white hover:text-orange-500 transition-all duration-300"
           >
             Contactar
           </a>
@@ -75,7 +76,7 @@ export default function Home() {
         class="h-full relative flex flex-col justify-center items-center bg-zinc-800 py-20"
         aria-labelledby="services-heading"
       >
-        <h2 id="services-heading" class="font-bold pb-20 z-10 text-5xl text-white cursor-default">Nuestros Servicios</h2>
+        <h2 id="services-heading" class="font-bold pb-12 lg:pb-20 z-10 text-3xl sm:text-4xl lg:text-5xl text-white cursor-default">Nuestros Servicios</h2>
         <img
           class="object-cover blur-sm h-full w-full absolute brightness-90"
           src="linea2.webp"
@@ -83,7 +84,7 @@ export default function Home() {
           role="presentation"
           loading="lazy"
         />
-        <div class="flex flex-col sm:flex-row justify-between w-full gap-8 sm:px-36 z-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full max-w-7xl px-6 sm:px-10 lg:px-12 xl:px-16 z-10">
           <For each={Array.from(servicesMap.entries())}>
             {([name, service], index) => (
               <ServiceItem
@@ -100,13 +101,13 @@ export default function Home() {
 
       <AboutUs />
 
-      <section class="h-full flex flex-col justify-center items-center py-32 relative" aria-labelledby="experiencias-heading">
+      <section class="h-full flex flex-col justify-center items-center py-20 lg:py-32 relative" aria-labelledby="experiencias-heading">
         <h2
           id="experiencias-heading"
           data-aos="fade-down"
           data-aos-duration="500"
           data-aos-offset="400"
-          class="font-bold z-10 pb-10 text-5xl text-white cursor-default mb-20">Nuestras Experiencias</h2>
+          class="font-bold z-10 pb-10 text-3xl sm:text-4xl lg:text-5xl text-white cursor-default mb-12 lg:mb-20">Nuestras Experiencias</h2>
         <div class="w-full px-2 mx-auto">
           <div class="w-[100%]">
             <ScrollCarousel />
@@ -114,7 +115,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section class="h-full flex flex-col justify-center items-center py-32 relative" aria-labelledby="testimonios-heading">
+      <section class="h-full flex flex-col justify-center items-center py-20 lg:py-32 relative" aria-labelledby="testimonios-heading">
         <img
           class="object-cover h-full w-full absolute blur-sm brightness-100 opacity-70"
           src="bg2.webp"
@@ -125,11 +126,11 @@ export default function Home() {
 
         <h2
           id="testimonios-heading"
-          class="font-bold z-10 pb-10 text-5xl text-white cursor-default">Voces de Satisfacción</h2>
+          class="font-bold z-10 pb-10 text-3xl sm:text-4xl lg:text-5xl text-white cursor-default">Voces de Satisfacción</h2>
 
         <GoogleRating rating={5} reviewCount={41} />
 
-        <div class="w-full flex flex-col sm:flex-row gap-10 px-10 justify-center z-10">
+        <div class="w-full max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 px-6 sm:px-10 lg:px-12 justify-center items-stretch z-10">
           <For each={testimonials}>
             {(testimonial, index) => (
               <TestimonialItem
@@ -144,18 +145,20 @@ export default function Home() {
 
       <FAQ />
 
-      <section class="h-full flex flex-col justify-center items-center bg-white py-24" aria-labelledby="garantia-heading">
+      <section class="h-full flex flex-col justify-center items-center bg-white py-16 lg:py-24" aria-labelledby="garantia-heading">
         <h2
           id="garantia-heading"
           data-aos="fade-right"
           data-aos-duration="500"
           data-aos-offset="200"
-          class="font-bold pb-12 text-4xl sm:text-5xl text-zinc-700 cursor-default text-center"
+          class="font-bold pb-10 lg:pb-12 text-3xl sm:text-4xl lg:text-5xl text-zinc-700 cursor-default text-center"
         >Nuestra Garantía de Confianza</h2>
-        <div class="w-[60%]">
+        <div class="w-[80%] lg:w-[70%] xl:w-[60%]">
           <InfiniteScrollCarousel />
         </div>
       </section>
+
+      <JoinTeam />
 
       <SectionContact />
 

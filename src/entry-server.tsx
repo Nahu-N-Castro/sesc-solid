@@ -10,7 +10,7 @@ const SITE_NAME = "SESC — Servicios Eléctricos Integrales";
 const SITE_TITLE =
   "SESC — Servicios Eléctricos Integrales en Córdoba | Electricidad, Cámaras, Energía Solar";
 const SITE_DESCRIPTION =
-  "Empresa de servicios eléctricos en Córdoba con más de 20 años de experiencia. Instalaciones industriales y residenciales, seguridad electrónica, paneles solares y climatización.";
+  "Empresa de servicios eléctricos en Córdoba con más de 20 años de experiencia. Instalaciones industriales y residenciales, seguridad electrónica, paneles solares e instalación de cargadores para autos eléctricos.";
 const OG_IMAGE = `${SITE_URL}/logo.png`;
 
 const localBusinessJsonLd = {
@@ -67,7 +67,7 @@ const localBusinessJsonLd = {
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Electricidad Integral" } },
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Seguridad Electrónica" } },
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Energías Renovables" } },
-    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Climatización" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Movilidad Eléctrica" } },
   ],
   aggregateRating: {
     "@type": "AggregateRating",
@@ -134,7 +134,7 @@ export default createHandler(() => (
           <meta name="author" content="SESC" />
           <meta
             name="keywords"
-            content="electricista Córdoba, servicios eléctricos Córdoba, instalación cámaras de seguridad, paneles solares Córdoba, climatización, bomba de calor, alarmas, cerco eléctrico, electricista matriculado, instalaciones industriales"
+            content="electricista Córdoba, servicios eléctricos Córdoba, instalación cámaras de seguridad, paneles solares Córdoba, cargadores autos eléctricos Córdoba, movilidad eléctrica, wallbox monofásico trifásico, certificado EPEC tarifa bonificada, apto eléctrico ERSEP, alarmas, cerco eléctrico, electricista matriculado, instalaciones industriales"
           />
 
           <title>{SITE_TITLE}</title>
@@ -162,8 +162,9 @@ export default createHandler(() => (
 
           {/* Iconos */}
           <link rel="icon" href="/favicon.ico" sizes="any" />
-          <link rel="icon" href="/logo-orange.png" type="image/png" />
-          <link rel="apple-touch-icon" href="/logo-orange.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
           {/* Performance: preconnect + preload del LCP */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />

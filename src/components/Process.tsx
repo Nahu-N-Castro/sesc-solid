@@ -51,16 +51,16 @@ const steps = [
 export default function Process() {
   return (
     <section
-      class="bg-zinc-900 py-24 px-6 sm:px-16"
+      class="bg-zinc-900 py-16 lg:py-24 px-6 sm:px-12 lg:px-16"
       aria-labelledby="process-heading"
     >
       <h2
         id="process-heading"
-        class="text-4xl sm:text-5xl text-white font-bold text-center mb-4"
+        class="text-3xl sm:text-4xl lg:text-5xl text-white font-bold text-center mb-4"
       >
         Cómo trabajamos
       </h2>
-      <p class="text-zinc-400 text-center mb-16 max-w-2xl mx-auto">
+      <p class="text-zinc-400 text-center mb-12 lg:mb-16 max-w-2xl mx-auto">
         Un proceso simple, transparente y profesional para que tu proyecto eléctrico esté en buenas manos.
       </p>
 

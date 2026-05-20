@@ -10,6 +10,11 @@ export type ServicePage = {
   };
   sections: { title: string; body: string; image?: string }[];
   features: string[];
+  brands?: {
+    title: string;
+    subtitle?: string;
+    items: { name: string; logo?: string }[];
+  };
 };
 
 export const servicePages: Record<string, ServicePage> = {
@@ -131,46 +136,63 @@ export const servicePages: Record<string, ServicePage> = {
       "Amortización en plazos razonables",
     ],
   },
-  climatizacion: {
-    slug: "climatizacion",
-    title: "Climatización",
+  "movilidad-electrica": {
+    slug: "movilidad-electrica",
+    title: "Movilidad Eléctrica",
     metaTitle:
-      "Climatización y Bombas de Calor en Córdoba | Aerotermia INVERTER - SESC",
+      "Cargadores para Autos Eléctricos en Córdoba | Monofásico y Trifásico - SESC",
     metaDescription:
-      "Instalación de bombas de calor por aerotermia para piscinas y climatización en Córdoba. Tecnología INVERTER de bajo consumo. Proyectos a medida con instaladores profesionales.",
+      "Instalación de cargadores para autos eléctricos en Córdoba. Monofásico y trifásico, todas las marcas. Certificado habilitante para tarifa bonificada de EPEC, análisis de factibilidad y Apto Eléctrico ERSEP. Cobertura provincial.",
     hero: {
-      image: "/bomba-calor-1.webp",
-      headline: "Climatización",
+      image: "/movilidad-electrica-1.webp",
+      headline: "Movilidad Eléctrica",
       subheadline:
-        "Bombas de calor por aerotermia con tecnología INVERTER. Eficiencia energética para piscinas y espacios climatizados.",
+        "Instalación profesional de estaciones de carga y cargadores para autos eléctricos. Todas las marcas. De tipo Monofásico o Trifásico. Con certificado Apto Eléctrico ERSEP para acceder a la tarifa diferenciada de movilidad eléctrica de EPEC.",
     },
     sections: [
       {
-        title: "Bombas de Calor",
-        image: "/bomba-calor-1.webp",
-        body: "El principio de funcionamiento de cualquier bomba de calor por aerotermia se basa en el aprovechamiento gratuito e inagotable de la energía contenida en el aire. El calentamiento del agua de la piscina se realiza a través de un intercambiador de titanio (para soportar agua clorada o tratada con sales), en unidades monoblock para instalación exterior.",
+        title: "Instalación de Cargadores Monofásicos y Trifásicos",
+        image: "/movilidad-electrica-2.webp",
+        body: "Instalamos puestos de carga para autos eléctricos en hogares, comercios e industrias. Trabajamos con sistemas monofásicos y trifásicos según la potencia disponible y las necesidades del vehículo, garantizando una instalación segura, eficiente y dimensionada a medida.",
       },
       {
-        title: "Tecnología INVERTER",
-        image: "/bomba-calor-2.webp",
-        body: "Nuestras bombas de calor consumen menos energía que otras del mercado gracias a su tecnología tipo INVERTER. Contamos con instaladores profesionales para realizar proyectos a medida según tus necesidades.",
+        title: "Análisis de Factibilidad y Proyecto a Medida",
+        image: "/movilidad-electrica-3.webp",
+        body: "Realizamos un análisis de factibilidad eléctrica previo en cada instalación para determinar la potencia disponible, tipo de tablero, protecciones adecuadas y cableado correspondiente. Diseñamos un proyecto a medida para que tu cargador o estación de carga funcione al máximo rendimiento, sin sobrecargar la instalación existente y evitando el riesgo eléctrico.",
       },
       {
-        title: "Calefacción para Espacios Grandes",
-        image: "/bomba-calor-3.webp",
-        body: "Soluciones de climatización dimensionadas para grandes superficies, manteniendo eficiencia energética y confort.",
+        title: "Certificaciones EPEC y ERSEP",
+        image: "/movilidad-electrica-4.webp",
+        body: "Entregamos el Certificado Apto Eléctrico correspondiente de ERSEP, con el mismo podrás acceder a la tarifa diferenciada de EPEC para usuarios con vehículos eléctricos. Además, dicho certificado avala que tu instalación cumple con las normas vigentes. Contamos con instaladores profesionales matriculados, servicio rápido y eficiente, con cobertura en toda la provincia de Córdoba.",
       },
     ],
     features: [
-      "Bombas de calor para piscinas",
-      "Tecnología INVERTER de bajo consumo",
-      "Intercambiadores de titanio",
-      "Unidades monoblock para exterior",
-      "Climatización de grandes espacios",
-      "Proyectos a medida",
-      "Instaladores profesionales",
-      "Garantía de fabricante",
+      "Servicio rápido con cobertura provincial",
+      "Análisis de factibilidad eléctrica",
+      "Instalación bajo Norma AEA",
+      "Certificado Apto Eléctrico ERSEP",
+      "Instaladores profesionales matriculados",
+      "Materiales normalizados IRAM",
+      "Instalación para todas las marcas",
+      "Garantía de instalación",
     ],
+    brands: {
+      title: "Marcas con las que trabajamos",
+      subtitle: "Instalamos cargadores compatibles con todas las marcas de autos eléctricos e híbridos disponibles en Argentina.",
+      items: [
+        { name: "BAIC", logo: "/brands/cars/baic.webp" },
+        { name: "BYD", logo: "/brands/cars/byd.webp" },
+        { name: "Chevrolet", logo: "/brands/cars/chevrolet.webp" },
+        { name: "Fiat", logo: "/brands/fiat.webp" },
+        { name: "GWM", logo: "/brands/cars/gwm.webp" },
+        { name: "JAC", logo: "/brands/cars/jac.webp" },
+        { name: "Jeep", logo: "/brands/jeep.webp" },
+        { name: "JMEV", logo: "/brands/cars/jmev.webp" },
+        { name: "Nissan", logo: "/brands/nissan.webp" },
+        { name: "Renault", logo: "/brands/cars/renault.webp" },
+        { name: "Toyota", logo: "/brands/cars/toyota.webp" },
+      ],
+    },
   },
 };
 

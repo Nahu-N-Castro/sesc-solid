@@ -27,7 +27,7 @@ export default function WhatsAppFloat() {
   return (
     <div class="fixed bottom-5 right-5 z-30 flex items-end gap-3">
       <Show when={showTooltip()}>
-        <div class="relative bg-white text-zinc-800 rounded-2xl px-4 py-3 shadow-xl max-w-[220px] animate-fade-in-up hidden sm:block">
+        <div class="relative bg-white text-zinc-800 rounded-2xl px-4 py-3 shadow-xl max-w-[180px] sm:max-w-[220px] animate-fade-in-up">
           <button
             onClick={dismiss}
             aria-label="Cerrar mensaje"

@@ -19,8 +19,9 @@ function PopUp(props: any) {
       <button
         class="lg:hidden p-2 fixed rounded-full top-14 right-5 bg-zinc-800 z-[999] shadow-lg"
         onClick={handleClose}
+        aria-label="Cerrar"
       >
-        <img class="h-8 w-8 sm:h-10 sm:w-10 p-1" src="/close.png" alt="close" />
+        <img class="h-8 w-8 sm:h-10 sm:w-10 p-1" src="/close.png" alt="" role="presentation" width="40" height="40" />
       </button>
 
       <div

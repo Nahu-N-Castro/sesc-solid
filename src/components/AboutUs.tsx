@@ -14,33 +14,27 @@ export default function AboutUs() {
   return (
     <>
       <section
-        class="flex justify-center items-center py-32 bg-orange-500 backdrop-blur-md backdrop-brightness-75">
+        class="flex justify-center items-center py-16 sm:py-20 lg:py-28 bg-orange-500 backdrop-blur-md backdrop-brightness-75">
         <div
           data-aos="fade"
-          class="w-full flex flex-col h-full relative drop-shadow-xl transition-all justify-center items-center text-zinc-100 font-medium px-4 sm:px-52 cursor-default">
-          <h2 class="font-bold mb-20 text-5xl ">Sobre Nosotros</h2>
-          <div class="flex flex-col sm:flex-row justify-between gap-10">
-            <div class="flex flex-col text-start sm:w-[50%]">
-              <p class="drop-shadow-md ">Somos una empresa de servicios eléctricos creada y con crecimiento en
-                plena crisis económica, formada por profesionales con más de 20 años de
-                experiencia.
+          class="w-full max-w-7xl flex flex-col h-full relative drop-shadow-xl transition-all justify-center items-center text-zinc-100 font-medium px-6 sm:px-10 lg:px-16 cursor-default">
+          <div class="flex flex-col items-center text-center mb-10 lg:mb-16">
+            <span class="text-sm uppercase tracking-widest font-semibold text-white/80 mb-3">Quiénes somos</span>
+            <h2 class="font-bold text-3xl sm:text-4xl lg:text-5xl">Sobre Nosotros</h2>
+          </div>
+          <div class="flex flex-col lg:flex-row justify-between gap-10 lg:gap-16 w-full">
+            <div class="flex flex-col gap-5 text-start lg:w-1/2">
+              <p class="text-lg lg:text-xl font-semibold leading-snug">
+                Más de 20 años de experiencia en proyectos eléctricos de alta relevancia.
               </p>
-              <p class="drop-shadow-md">
-                Hemos adquirido nuestra experiencia participando íntegramente en la
-                organización y ejecución de proyectos de gran relevancia como son centros
-                comerciales, plantas de producción automotriz y alimentos, PYMES y
-                comercios, edificios residenciales y comerciales, casas de múltiples
-                instalaciones y pequeñas también, pero no por ello menos importantes para
-                nosotros, siempre atendiendo y primando la calidad y atención al cliente que
-                deseamos poner a su servicio en todo su ámbito.
+              <p class="text-base leading-relaxed text-white/90">
+                Somos una empresa de servicios eléctricos creada y con crecimiento en plena crisis económica, formada por profesionales con más de 20 años de experiencia.
               </p>
-              {/* <button
-                onClick={handleShow}
-                class="w-fit my-6 font-semibold text-md bg-white shadow-md hover:shadow-lg px-4 py-3 rounded-md text-orange-500 transition-all hover:scale-105 duration-300 hover:-translate-y-1">
-                Descubre Más
-              </button> */}
+              <p class="text-base leading-relaxed text-white/90">
+                Participamos en proyectos de gran relevancia como centros comerciales, plantas de producción automotriz y alimentos, PYMES, comercios, edificios residenciales y comerciales, y casas de múltiples instalaciones. Siempre priorizando la calidad y la atención al cliente.
+              </p>
             </div>
-            <div class="grid sm:grid-cols-3 sm:w-[50%] gap-8 z-10">
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:w-1/2 gap-3 lg:gap-4 z-10 self-center w-full">
               <For each={benefits}>
                 {(benefit, index) => (
                   <BenefitItem index={index() * 2} icon={benefit.icon} label={benefit.name} />

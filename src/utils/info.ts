@@ -2,7 +2,7 @@ export type ServicesType =
   | "Electricidad Integral"
   | "Seguridad Electrónica"
   | "Energias Renovables"
-  | "Climatización";
+  | "Movilidad Eléctrica";
 
 export type ServiceDetail = {
   icon: string;
@@ -38,6 +38,29 @@ export const servicesMap = new Map<ServicesType, ServiceDetail[]>([
         title: "Comercial",
         description:
           " Brindamos soluciones integrales en instalaciones eléctricas, incluyendo proyectos de instalaciones, diseño y armado de tableros BT, instalación de luminarias, cámaras de seguridad y cercos eléctricos. También realizamos reparaciones y reformas de instalaciones, optimización para el ahorro de energía, colocación de pilares monofásicos y trifásicos, además de certificaciones eléctricas de hasta 10KVA.",
+      },
+    ],
+  ],
+  [
+    "Movilidad Eléctrica",
+    [
+      {
+        icon: "movilidad-electrica-1.webp",
+        title: "Cargadores Monofásico y Trifásico",
+        description:
+          "Instalamos puestos de carga para autos eléctricos en hogares, comercios e industrias. Trabajamos con sistemas monofásicos y trifásicos, todas las marcas, garantizando una instalación segura, eficiente y dimensionada a medida según la potencia disponible y las necesidades de tu vehículo.",
+      },
+      {
+        icon: "movilidad-electrica-2.webp",
+        title: "Análisis de Factibilidad",
+        description:
+          "Realizamos un análisis de factibilidad eléctrica previo para determinar potencia disponible, protecciones y recorrido óptimo del cableado. Proyecto a medida con instaladores profesionales matriculados, servicio rápido y cobertura en toda la provincia de Córdoba.",
+      },
+      {
+        icon: "movilidad-electrica-3.webp",
+        title: "Certificaciones EPEC y ERSEP",
+        description:
+          "Entregamos el Certificado Habilitante para acceder a la tarifa bonificada de EPEC para usuarios con vehículos eléctricos, y el Certificado Apto Eléctrico ERSEP que avala el cumplimiento normativo de tu instalación.",
       },
     ],
   ],
@@ -81,33 +104,11 @@ export const servicesMap = new Map<ServicesType, ServiceDetail[]>([
       },
     ],
   ],
-  [
-    "Climatización",
-    [
-      {
-        icon: "bomba-calor-1.webp",
-        title: "Bomba de Calor",
-        description:
-          "El principio de funcionamiento de cualquier bomba de calor por aerotermia se basa en  el aprovechamiento gratuito e inagotable de la energía contenida en el aire, mediante el cambio de características de un fluido refrigerante dentro de un ciclo termodinámico  La principal diferencia es que el calentamiento del agua de la piscina se realiza a través de un intercambiador de titanio(para soportar sin problemas las características del  agua clorada o tratada con sales habitual en las piscinas), hablando siempre de unidades monoblock para instalación exterior que instalan todos los elementos en un mismo equipo",
-      },
-      {
-        icon: "bomba-calor-2.webp",
-        title: "",
-        description:
-          "Nuestras bombas de calor consumen menos energía que otras del mercado gracias a su tecnología tipo INVERTER. Contamos con instaladores profesionales para realizar los proyectos a medida de nuestros clientes.",
-      },
-      {
-        icon: "bomba-calor-3.webp",
-        title: "",
-        description: "Calefacción para espacios grandes.",
-      },
-    ],
-  ],
 ]);
 
 export const benefits = [
   { icon: "time.png", name: "Rapidez" },
-  { icon: "rayo.png", name: "Ahorro Energetico" },
+  { icon: "rayo.png", name: "Ahorro Energético" },
   { icon: "rule.png", name: "A Medida" },
   { icon: "dinero.png", name: "Calidad Precio" },
   { icon: "confianza.png", name: "Confianza" },

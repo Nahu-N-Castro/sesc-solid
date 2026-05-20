@@ -22,6 +22,10 @@ export const faqs = [
     a: "Sí, instalamos sistemas fotovoltaicos OffGrid, OnGrid e Híbridos. Asesoramos sobre dimensionamiento, vida útil, amortización y trámites con la distribuidora.",
   },
   {
+    q: "¿Instalan cargadores para autos eléctricos?",
+    a: "Sí. Instalamos cargadores monofásicos y trifásicos para todas las marcas, con análisis de factibilidad previo, proyecto a medida y cobertura provincial. Entregamos el Certificado Habilitante para acceder a la tarifa bonificada de EPEC y el Certificado Apto Eléctrico ERSEP.",
+  },
+  {
     q: "¿Qué marcas de cámaras de seguridad usan?",
     a: "Trabajamos con marcas líderes como Dahua y Hikvision, equipos homologados y certificados bajo normas internacionales. Instalamos sistemas analógicos con DVR e IP con NVR.",
   },
@@ -44,16 +48,16 @@ export default function FAQ() {
 
   return (
     <section
-      class="bg-white py-24 px-6 sm:px-16"
+      class="bg-white py-16 lg:py-24 px-6 sm:px-12 lg:px-16"
       aria-labelledby="faq-heading"
     >
       <h2
         id="faq-heading"
-        class="text-4xl sm:text-5xl text-zinc-800 font-bold text-center mb-4"
+        class="text-3xl sm:text-4xl lg:text-5xl text-zinc-800 font-bold text-center mb-4"
       >
         Preguntas Frecuentes
       </h2>
-      <p class="text-zinc-500 text-center mb-12 max-w-2xl mx-auto">
+      <p class="text-zinc-500 text-center mb-10 lg:mb-12 max-w-2xl mx-auto">
         Si no encontrás tu respuesta, escribinos por WhatsApp y te respondemos en minutos.
       </p>
 

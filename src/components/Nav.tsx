@@ -67,6 +67,13 @@ export default function Nav() {
             SERVICIOS
           </A>
           <A
+            href="/movilidad-electrica"
+            onClick={closeMenu}
+            class="hidden lg:flex md:px-3 md:py-2 md:rounded-md border-2 border-transparent hover:border-orange-500 transition-all"
+          >
+            MOVILIDAD ELÉCTRICA
+          </A>
+          <A
             href={linkTo("targetContact")}
             onClick={handleAnchorClick("targetContact")}
             class="hidden lg:flex md:px-3 md:py-2 md:rounded-md border-2 border-transparent hover:border-orange-500 transition-all"
@@ -79,7 +86,7 @@ export default function Nav() {
           >
             LLAMAR AHORA
           </a>
-          <div class="sm:hidden flex flex-col">
+          <div class="lg:hidden flex flex-col">
             <button
               onClick={toggleMenu}
               class="relative"
@@ -132,7 +139,33 @@ export default function Nav() {
                 <A href="/electricidad" onClick={closeMenu} class="text-base text-white/80 text-center py-2 hover:text-orange-500">Electricidad Integral</A>
                 <A href="/seguridad-electronica" onClick={closeMenu} class="text-base text-white/80 text-center py-2 hover:text-orange-500">Seguridad Electrónica</A>
                 <A href="/energia-solar" onClick={closeMenu} class="text-base text-white/80 text-center py-2 hover:text-orange-500">Energías Renovables</A>
-                <A href="/climatizacion" onClick={closeMenu} class="text-base text-white/80 text-center py-2 hover:text-orange-500">Climatización</A>
+                <A href="/movilidad-electrica" onClick={closeMenu} class="text-base text-white/80 text-center py-2 hover:text-orange-500">Movilidad Eléctrica</A>
+              </div>
+              <div class="flex justify-center gap-4 mx-5 mt-8 pt-5 border-t border-white/20">
+                <a
+                  href="https://www.facebook.com/PabloDCtecnico"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Facebook"
+                  onClick={closeMenu}
+                  class="w-11 h-11 rounded-full bg-white/5 hover:bg-orange-500 flex items-center justify-center transition-colors"
+                >
+                  <svg class="w-5 h-5 text-white" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M41.5 4H9.5C6.74 4 4.5 6.24 4.5 9V41C4.5 43.76 6.74 46 9.5 46H41.5C44.26 46 46.5 43.76 46.5 41V9C46.5 6.24 44.26 4 41.5 4ZM37.5 19H35.5C33.36 19 32.5 19.5 32.5 21V24H37.5L36.5 29H32.5V44H27.5V29H23.5V24H27.5V21C27.5 17 29.5 14 33.5 14C36.4 14 37.5 15 37.5 15V19Z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.instagram.com/electricidad_sesc"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram"
+                  onClick={closeMenu}
+                  class="w-11 h-11 rounded-full bg-white/5 hover:bg-orange-500 flex items-center justify-center transition-colors"
+                >
+                  <svg class="w-5 h-5 text-white" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M16.5 3C9.33 3 3.5 8.83 3.5 16V34C3.5 41.17 9.33 47 16.5 47H34.5C41.67 47 47.5 41.17 47.5 34V16C47.5 8.83 41.67 3 34.5 3H16.5ZM37.5 11C38.6 11 39.5 11.9 39.5 13C39.5 14.1 38.6 15 37.5 15C36.4 15 35.5 14.1 35.5 13C35.5 11.9 36.4 11 37.5 11ZM25.5 14C31.57 14 36.5 18.93 36.5 25C36.5 31.07 31.57 36 25.5 36C19.43 36 14.5 31.07 14.5 25C14.5 18.93 19.43 14 25.5 14ZM25.5 16C20.54 16 16.5 20.04 16.5 25C16.5 29.96 20.54 34 25.5 34C30.46 34 34.5 29.96 34.5 25C34.5 20.04 30.46 16 25.5 16Z" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>

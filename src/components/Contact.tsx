@@ -6,10 +6,10 @@ export default function SectionContact() {
       style="background-image: url('/torres.webp')"
       aria-labelledby="contacto-heading"
     >
-      <h2 id="contacto-heading" class="text-white font-bold text-4xl sm:text-5xl mb-10 drop-shadow-lg">Contactanos</h2>
+      <h2 id="contacto-heading" class="text-white font-bold text-3xl sm:text-4xl lg:text-5xl mb-8 lg:mb-10 drop-shadow-lg">Contactanos</h2>
 
       <div
-        class="flex flex-col lg:flex-row gap-10 lg:gap-32 px-16 py-11 text-white bg-black bg-opacity-25 rounded-2xl backdrop-blur-lg">
+        class="flex flex-col lg:flex-row gap-8 lg:gap-16 xl:gap-32 px-10 sm:px-16 py-10 lg:py-11 text-white bg-black bg-opacity-25 rounded-2xl backdrop-blur-lg">
         <div class="flex flex-col items-center lg:items-start gap-3">
           <img
             class="py-5"

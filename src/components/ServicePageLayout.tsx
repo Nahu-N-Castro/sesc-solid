@@ -1,7 +1,8 @@
-import { For } from "solid-js";
+import { For, Show } from "solid-js";
 import { A } from "@solidjs/router";
 import type { ServicePage } from "~/utils/services-pages";
 import { servicePagesList } from "~/utils/services-pages";
+import BrandCarousel from "./BrandCarousel";
 import Footer from "./Footer";
 import WhatsAppFloat, { buildWhatsAppUrl } from "./WhatsAppFloat";
 
@@ -9,7 +10,7 @@ export default function ServicePageLayout(props: { service: ServicePage }) {
   return (
     <main class="bg-zinc-800 text-white">
       <section
-        class="relative h-[70vh] flex items-center justify-center"
+        class="relative min-h-[60vh] lg:min-h-[70vh] py-24 lg:py-0 flex items-center justify-center"
         aria-label={props.service.title}
       >
         <img
@@ -26,8 +27,8 @@ export default function ServicePageLayout(props: { service: ServicePage }) {
             <span class="mx-2">/</span>
             <span class="text-orange-400">{props.service.title}</span>
           </nav>
-          <h1 class="text-4xl sm:text-6xl font-bold mb-6">{props.service.hero.headline}</h1>
-          <p class="text-lg sm:text-2xl text-zinc-200 mb-8 leading-relaxed">{props.service.hero.subheadline}</p>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 lg:mb-6">{props.service.hero.headline}</h1>
+          <p class="text-base sm:text-lg lg:text-xl xl:text-2xl text-zinc-200 mb-6 lg:mb-8 leading-relaxed">{props.service.hero.subheadline}</p>
           <div class="flex flex-wrap gap-4 justify-center sm:justify-start">
             <a
               href={buildWhatsAppUrl(`Hola SESC, me interesa el servicio de ${props.service.title}. ¿Pueden asesorarme?`)}
@@ -47,9 +48,19 @@ export default function ServicePageLayout(props: { service: ServicePage }) {
         </div>
       </section>
 
-      <section class="py-20 px-6 sm:px-16">
+      <Show when={props.service.brands}>
+        {(brands) => (
+          <BrandCarousel
+            title={brands().title}
+            subtitle={brands().subtitle}
+            items={brands().items}
+          />
+        )}
+      </Show>
+
+      <section class="py-14 lg:py-20 px-6 sm:px-12 lg:px-16">
         <div class="max-w-5xl mx-auto">
-          <h2 class="text-3xl sm:text-4xl font-bold mb-10 text-center">¿Qué incluye este servicio?</h2>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 lg:mb-10 text-center">¿Qué incluye este servicio?</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <For each={props.service.features}>
               {(feat) => (
@@ -67,28 +78,28 @@ export default function ServicePageLayout(props: { service: ServicePage }) {
 
       <For each={props.service.sections}>
         {(section, i) => (
-          <section class={`py-20 px-6 sm:px-16 ${i() % 2 === 0 ? "bg-zinc-900" : "bg-zinc-800"}`}>
-            <div class={`max-w-6xl mx-auto flex flex-col ${i() % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-12 items-center`}>
+          <section class={`py-14 lg:py-20 px-6 sm:px-12 lg:px-16 ${i() % 2 === 0 ? "bg-zinc-900" : "bg-zinc-800"}`}>
+            <div class={`max-w-6xl mx-auto flex flex-col ${i() % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-8 lg:gap-12 items-center`}>
               {section.image && (
                 <img
                   src={section.image}
                   alt={section.title}
                   loading="lazy"
-                  class="w-full lg:w-1/2 rounded-2xl shadow-xl object-cover h-80 lg:h-96"
+                  class="w-full lg:w-1/2 rounded-2xl shadow-xl object-cover h-64 sm:h-80 lg:h-80 xl:h-96"
                 />
               )}
               <div class={section.image ? "lg:w-1/2" : "w-full"}>
-                <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-orange-500">{section.title}</h2>
-                <p class="text-zinc-300 leading-relaxed text-lg">{section.body}</p>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 lg:mb-6 text-orange-500">{section.title}</h2>
+                <p class="text-zinc-300 leading-relaxed text-base lg:text-lg">{section.body}</p>
               </div>
             </div>
           </section>
         )}
       </For>
 
-      <section class="py-20 px-6 bg-orange-500 text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">¿Necesitás asesoramiento?</h2>
-        <p class="text-white/90 mb-8 text-lg">Te asesoramos sin compromiso. Presupuesto sin cargo.</p>
+      <section class="py-14 lg:py-20 px-6 bg-orange-500 text-center">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">¿Necesitás asesoramiento?</h2>
+        <p class="text-white/90 mb-6 lg:mb-8 text-base lg:text-lg">Te asesoramos sin compromiso. Presupuesto sin cargo.</p>
         <a
           href={buildWhatsAppUrl(`Hola SESC, me interesa el servicio de ${props.service.title}. ¿Pueden asesorarme?`)}
           target="_blank"
@@ -99,8 +110,8 @@ export default function ServicePageLayout(props: { service: ServicePage }) {
         </a>
       </section>
 
-      <section class="py-20 px-6 bg-zinc-900">
-        <h2 class="text-3xl font-bold text-center text-white mb-12">Otros servicios</h2>
+      <section class="py-14 lg:py-20 px-6 sm:px-12 bg-zinc-900">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-white mb-8 lg:mb-12">Otros servicios</h2>
         <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6">
           <For each={servicePagesList.filter((s) => s.slug !== props.service.slug)}>
             {(other) => (
