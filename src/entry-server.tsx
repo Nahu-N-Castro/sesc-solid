@@ -3,7 +3,7 @@ import { createHandler, StartServer } from "@solidjs/start/server";
 import { faqs } from "~/components/FAQ";
 
 const GA4_ID = process.env.VITE_GA4_ID || "";
-const GTM_ID = process.env.VITE_GTM_ID || "";
+const GTM_ID = process.env.VITE_GTM_ID || "GTM-PBS8L654";
 
 const SITE_URL = "https://www.sesc.com.ar";
 const SITE_NAME = "SESC — Servicios Eléctricos Integrales";
