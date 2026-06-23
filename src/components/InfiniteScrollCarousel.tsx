@@ -1,21 +1,21 @@
 import { For } from "solid-js";
 
 const brands = [
-  { src: "brands/cocacola.webp", alt: "Coca Cola Andina" },
-  { src: "brands/comau.webp", alt: "Comau" },
   { src: "brands/crayon.webp", alt: "Crayon" },
-  { src: "brands/fiat.webp", alt: "Fiat" },
-  { src: "brands/mgi.webp", alt: "MGI Courtier" },
   { src: "brands/otonello.webp", alt: "Otonello" },
   { src: "brands/audoor.webp", alt: "Audoor" },
   { src: "brands/autocity.webp", alt: "Autocity" },
+  { src: "brands/peugeot.webp", alt: "Peugeot" },
+  { src: "brands/volkswagen.webp", alt: "Volkswagen" },
+  { src: "brands/tagle.webp", alt: "Tagle" },
   { src: "brands/jeep.webp", alt: "Jeep" },
   { src: "brands/motcor.webp", alt: "Motcor" },
   { src: "brands/nissan.webp", alt: "Nissan" },
   { src: "brands/raomed.webp", alt: "Raomed" },
-  { src: "brands/cars/renault.webp", alt: "Renault" },
-  { src: "brands/toyota.webp", alt: "Toyota" },
   { src: "brands/royal-enfield.webp", alt: "Royal Enfield" },
+  { src: "brands/centro-motor-toyota.webp", alt: "Centro Motor Toyota" },
+  { src: "brands/casacada.webp", alt: "Cascada" },
+  { src: "brands/cars/byd.webp", alt: "BYD" },
 ];
 
 function Track(props: { ariaHidden: boolean }) {
