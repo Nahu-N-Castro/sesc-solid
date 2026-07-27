@@ -2,8 +2,8 @@ import { Title, Meta, Link } from "@solidjs/meta";
 import ServicePageLayout from "~/components/ServicePageLayout";
 import { servicePages } from "~/utils/services-pages";
 
-export default function SeguridadPage() {
-  const service = servicePages["seguridad-electronica"];
+export default function TrabajosEnAlturaPage() {
+  const service = servicePages["trabajos-en-altura"];
   return (
     <>
       <Title>{service.metaTitle}</Title>

@@ -5,6 +5,8 @@ export type ServicePage = {
   metaDescription: string;
   hero: {
     image: string;
+    /** Video de fondo opcional (mp4 corto, sin audio). La imagen queda de poster/fallback. */
+    video?: string;
     headline: string;
     subheadline: string;
   };
@@ -14,6 +16,15 @@ export type ServicePage = {
     title: string;
     subtitle?: string;
     items: { name: string; logo?: string }[];
+  };
+  /** Título de la banda naranja de CTA. Fallback: "¿Necesitás asesoramiento?" */
+  ctaTitle?: string;
+  /** Galería "Fotos de campo": el primer item es la foto destacada (2x2). */
+  gallery?: {
+    title: string;
+    subtitle?: string;
+    instagramUrl?: string;
+    items: { image: string; caption: string }[];
   };
 };
 
@@ -58,6 +69,7 @@ export const servicePages: Record<string, ServicePage> = {
       "Pilares monofásicos y trifásicos",
       "Automatizaciones y programación",
     ],
+    ctaTitle: "¿Necesitás un electricista matriculado?",
   },
   "seguridad-electronica": {
     slug: "seguridad-electronica",
@@ -99,6 +111,7 @@ export const servicePages: Record<string, ServicePage> = {
       "Cercos eléctricos perimetrales",
       "Mantenimiento de sistemas existentes",
     ],
+    ctaTitle: "¿Querés proteger tu casa o negocio?",
   },
   "energia-solar": {
     slug: "energia-solar",
@@ -135,6 +148,7 @@ export const servicePages: Record<string, ServicePage> = {
       "Garantía de paneles 25 años",
       "Amortización en plazos razonables",
     ],
+    ctaTitle: "¿Querés generar tu propia energía?",
   },
   "movilidad-electrica": {
     slug: "movilidad-electrica",
@@ -191,6 +205,63 @@ export const servicePages: Record<string, ServicePage> = {
         { name: "Nissan", logo: "/brands/nissan.webp" },
         { name: "Renault", logo: "/brands/cars/renault.webp" },
         { name: "Toyota", logo: "/brands/cars/toyota.webp" },
+      ],
+    },
+    ctaTitle: "¿Querés cargar tu auto en casa?",
+  },
+  "trabajos-en-altura": {
+    slug: "trabajos-en-altura",
+    title: "Trabajos en Altura",
+    metaTitle:
+      "Trabajos en Altura con Hidroelevador en Córdoba | Iluminación Deportiva y Alumbrado - SESC",
+    metaDescription:
+      "Trabajos en altura con hidroelevador propio de hasta 11 metros en Córdoba: iluminación deportiva LED para canchas y clubes, mantenimiento de alumbrado público y privado, acometidas y trabajos sobre postes y líneas. Personal habilitado, presupuesto sin cargo.",
+    hero: {
+      image: "/trabajos-altura-1.webp",
+      video: "/trabajos-altura-hero.mp4",
+      headline: "Trabajos en Altura",
+      subheadline:
+        "Hidroelevador propio con alcance de hasta 11 metros. Iluminación deportiva, alumbrado público y privado, y trabajos sobre postes y líneas en toda la provincia de Córdoba.",
+    },
+    sections: [
+      {
+        title: "Alumbrado Público y Privado",
+        image: "/trabajos-altura-3.webp",
+        body: "Mantenimiento preventivo y correctivo de alumbrado en calles, barrios privados, countries, playones, estacionamientos e industrias. Recambio de luminarias a LED para reducir el consumo, reparación de fotocélulas y tableros de comando, y revisión completa de columnas. Servicio ágil con equipo propio: diagnóstico, presupuesto y ejecución sin intermediarios.",
+      },
+      {
+        title: "Iluminación Deportiva",
+        image: "/trabajos-altura-2.webp",
+        body: "Proyectamos, instalamos y renovamos la iluminación de canchas de tenis, pádel, fútbol y predios deportivos. Realizamos recambio de proyectores a tecnología LED, orientación y enfoque de artefactos, y mantenimiento de columnas y estructuras de iluminación. Con nuestro hidroelevador trabajamos directamente sobre la cancha, de forma rápida y segura, sin dañar la superficie de juego.",
+      },
+      {
+        title: "Trabajos sobre Postes y Líneas",
+        image: "/trabajos-altura-4.webp",
+        body: "Ejecutamos acometidas, tendidos aéreos, reparaciones y adecuaciones sobre postes y líneas de baja tensión. Colocación y recambio de postes, brazos y crucetas, retiro de instalaciones fuera de servicio y montaje de equipamiento en altura. Personal habilitado para trabajo en altura, con elementos de seguridad certificados y señalización de la zona de trabajo.",
+      },
+    ],
+    features: [
+      "Hidroelevador propio con alcance de hasta 11 m",
+      "Iluminación LED para canchas y clubes",
+      "Recambio y reparación de luminarias en altura",
+      "Mantenimiento de alumbrado público y privado",
+      "Acometidas y tendidos aéreos",
+      "Colocación y recambio de postes y brazos",
+      "Personal habilitado para trabajo en altura",
+      "Cobertura en toda la provincia de Córdoba",
+    ],
+    ctaTitle: "¿Necesitás trabajos en altura?",
+    gallery: {
+      title: "Fotos de campo",
+      subtitle: "Obras reales de nuestro equipo, sin producción. Así trabajamos.",
+      instagramUrl: "https://www.instagram.com/electricidad_sesc",
+      items: [
+        { image: "/campo/altura-1.webp", caption: "Hidroelevador en predio deportivo — Córdoba" },
+        { image: "/campo/altura-2.webp", caption: "Proyectores LED montados sobre poste" },
+        { image: "/campo/altura-3.webp", caption: "Brazo extendido sobre columna de alumbrado" },
+        { image: "/campo/altura-4.webp", caption: "Recambio LED en cancha de polvo de ladrillo" },
+        { image: "/campo/altura-5.webp", caption: "Tablero de comando de alumbrado" },
+        { image: "/campo/altura-6.webp", caption: "Acometidas y líneas sobre postes" },
       ],
     },
   },

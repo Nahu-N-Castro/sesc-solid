@@ -7,6 +7,7 @@ const labelToSlug: Record<string, string> = {
   "Seguridad Electrónica": "seguridad-electronica",
   "Energias Renovables": "energia-solar",
   "Movilidad Eléctrica": "movilidad-electrica",
+  "Trabajos en Altura": "trabajos-en-altura",
 };
 
 export default function ServiceItem(props: { service: ServiceDetail[], label: string, index: number }) {

@@ -6,9 +6,42 @@ import BrandCarousel from "./BrandCarousel";
 import Footer from "./Footer";
 import WhatsAppFloat, { buildWhatsAppUrl } from "./WhatsAppFloat";
 
+const SITE_URL = "https://www.sesc.com.ar";
+
 export default function ServicePageLayout(props: { service: ServicePage }) {
+  const breadcrumbLd = () =>
+    JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: `${SITE_URL}/` },
+        { "@type": "ListItem", position: 2, name: props.service.title, item: `${SITE_URL}/${props.service.slug}` },
+      ],
+    });
+  const serviceLd = () =>
+    JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: props.service.title,
+      description: props.service.metaDescription,
+      url: `${SITE_URL}/${props.service.slug}`,
+      image: `${SITE_URL}${props.service.hero.image}`,
+      areaServed: [
+        { "@type": "City", name: "Córdoba" },
+        { "@type": "AdministrativeArea", name: "Provincia de Córdoba" },
+      ],
+      provider: {
+        "@type": "Electrician",
+        name: "Servicio Especializado SC | Instalaciones Eléctricas Certificadas",
+        telephone: "+54-351-2922784",
+        url: SITE_URL,
+      },
+    });
+
   return (
     <main class="bg-zinc-800 text-white">
+      <script type="application/ld+json" innerHTML={breadcrumbLd()} />
+      <script type="application/ld+json" innerHTML={serviceLd()} />
       <section
         class="relative min-h-[60vh] lg:min-h-[70vh] py-24 lg:py-0 flex items-center justify-center"
         aria-label={props.service.title}
@@ -20,6 +53,22 @@ export default function ServicePageLayout(props: { service: ServicePage }) {
           class="absolute inset-0 w-full h-full object-cover brightness-50"
           fetchpriority="high"
         />
+        <Show when={props.service.hero.video}>
+          {(video) => (
+            <video
+              class="absolute inset-0 w-full h-full object-cover brightness-50"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster={props.service.hero.image}
+              aria-hidden="true"
+            >
+              <source src={video()} type="video/mp4" />
+            </video>
+          )}
+        </Show>
         <div class="absolute inset-0 bg-gradient-to-t from-zinc-800 to-transparent" />
         <div class="relative z-10 max-w-4xl px-6 sm:px-12 text-center sm:text-left">
           <nav aria-label="Breadcrumb" class="mb-4 text-sm text-zinc-300">
@@ -97,8 +146,56 @@ export default function ServicePageLayout(props: { service: ServicePage }) {
         )}
       </For>
 
+      <Show when={props.service.gallery}>
+        {(gallery) => (
+          <section class="py-14 lg:py-20 px-6 sm:px-12 lg:px-16" aria-label={gallery().title}>
+            <div class="max-w-6xl mx-auto">
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-3">{gallery().title}</h2>
+              <Show when={gallery().subtitle}>
+                <p class="text-zinc-400 text-center text-base lg:text-lg mb-8 lg:mb-10">{gallery().subtitle}</p>
+              </Show>
+              <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-5 auto-rows-[9rem] sm:auto-rows-[11rem] lg:auto-rows-[13rem]">
+                <For each={gallery().items}>
+                  {(item, i) => (
+                    <figure class={`relative rounded-xl overflow-hidden group ${i() === 0 ? "col-span-2 lg:col-span-3 row-span-2" : i() === 1 ? "row-span-2" : ""}`}>
+                      <img
+                        src={item.image}
+                        alt={item.caption}
+                        loading="lazy"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <figcaption class="absolute bottom-2 left-2 lg:bottom-3 lg:left-3 flex items-center gap-1.5 bg-zinc-950/70 backdrop-blur-sm rounded-full px-3 py-1.5 text-xs lg:text-sm text-white max-w-[calc(100%-1rem)]">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 text-orange-400 shrink-0" aria-hidden="true">
+                          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />
+                        </svg>
+                        <span class="truncate">{item.caption}</span>
+                      </figcaption>
+                    </figure>
+                  )}
+                </For>
+              </div>
+              <Show when={gallery().instagramUrl}>
+                <div class="flex justify-center mt-8">
+                  <a
+                    href={gallery().instagramUrl}
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 font-semibold transition-colors"
+                  >
+                    <svg class="w-5 h-5" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M16.5 3C9.33 3 3.5 8.83 3.5 16V34C3.5 41.17 9.33 47 16.5 47H34.5C41.67 47 47.5 41.17 47.5 34V16C47.5 8.83 41.67 3 34.5 3H16.5ZM37.5 11C38.6 11 39.5 11.9 39.5 13C39.5 14.1 38.6 15 37.5 15C36.4 15 35.5 14.1 35.5 13C35.5 11.9 36.4 11 37.5 11ZM25.5 14C31.57 14 36.5 18.93 36.5 25C36.5 31.07 31.57 36 25.5 36C19.43 36 14.5 31.07 14.5 25C14.5 18.93 19.43 14 25.5 14ZM25.5 16C20.54 16 16.5 20.04 16.5 25C16.5 29.96 20.54 34 25.5 34C30.46 34 34.5 29.96 34.5 25C34.5 20.04 30.46 16 25.5 16Z" />
+                    </svg>
+                    Mirá más obras en nuestro Instagram
+                  </a>
+                </div>
+              </Show>
+            </div>
+          </section>
+        )}
+      </Show>
+
       <section class="py-14 lg:py-20 px-6 bg-orange-500 text-center">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">¿Necesitás asesoramiento?</h2>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">{props.service.ctaTitle ?? "¿Necesitás asesoramiento?"}</h2>
         <p class="text-white/90 mb-6 lg:mb-8 text-base lg:text-lg">Te asesoramos sin compromiso. Presupuesto sin cargo.</p>
         <a
           href={buildWhatsAppUrl(`Hola SESC, me interesa el servicio de ${props.service.title}. ¿Pueden asesorarme?`)}

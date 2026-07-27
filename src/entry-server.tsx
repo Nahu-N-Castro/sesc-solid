@@ -68,6 +68,7 @@ const localBusinessJsonLd = {
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Seguridad Electrónica" } },
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Energías Renovables" } },
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Movilidad Eléctrica" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Trabajos en Altura" } },
   ],
   aggregateRating: {
     "@type": "AggregateRating",
@@ -134,31 +135,15 @@ export default createHandler(() => (
           <meta name="author" content="SESC" />
           <meta
             name="keywords"
-            content="electricista Córdoba, servicios eléctricos Córdoba, instalación cámaras de seguridad, paneles solares Córdoba, cargadores autos eléctricos Córdoba, movilidad eléctrica, wallbox monofásico trifásico, certificado EPEC tarifa bonificada, apto eléctrico ERSEP, alarmas, cerco eléctrico, electricista matriculado, instalaciones industriales"
+            content="electricista Córdoba, servicios eléctricos Córdoba, instalación cámaras de seguridad, paneles solares Córdoba, cargadores autos eléctricos Córdoba, movilidad eléctrica, wallbox monofásico trifásico, certificado EPEC tarifa bonificada, apto eléctrico ERSEP, alarmas, cerco eléctrico, electricista matriculado, instalaciones industriales, trabajos en altura Córdoba, hidroelevador Córdoba, iluminación deportiva canchas, recambio luminarias LED, alumbrado público mantenimiento"
           />
 
-          <title>{SITE_TITLE}</title>
-          <meta name="description" content={SITE_DESCRIPTION} />
-          <link rel="canonical" href={`${SITE_URL}/`} />
-
-          {/* Open Graph */}
+          {/* Título, description, canonical y OG/Twitter se definen POR RUTA vía @solidjs/meta
+              (la home en index.tsx). Tenerlos acá duplicaba <title>/canonical en todas las páginas. */}
           <meta property="og:type" content="website" />
           <meta property="og:site_name" content={SITE_NAME} />
           <meta property="og:locale" content="es_AR" />
-          <meta property="og:url" content={`${SITE_URL}/`} />
-          <meta property="og:title" content={SITE_TITLE} />
-          <meta property="og:description" content={SITE_DESCRIPTION} />
-          <meta property="og:image" content={OG_IMAGE} />
-          <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
-          <meta property="og:image:alt" content="SESC - Servicios Eléctricos Integrales" />
-
-          {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:url" content={`${SITE_URL}/`} />
-          <meta name="twitter:title" content={SITE_TITLE} />
-          <meta name="twitter:description" content={SITE_DESCRIPTION} />
-          <meta name="twitter:image" content={OG_IMAGE} />
 
           {/* Iconos */}
           <link rel="icon" href="/favicon.ico" sizes="any" />

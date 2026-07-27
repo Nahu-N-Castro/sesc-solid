@@ -1,4 +1,5 @@
 import "aos/dist/aos.css";
+import { Title, Meta, Link } from "@solidjs/meta";
 import { For } from "solid-js";
 import AboutUs from "~/components/AboutUs";
 import Certifications from "~/components/Certifications";
@@ -42,8 +43,24 @@ export default function Home() {
     });
   });
 
+  const SITE_URL = "https://www.sesc.com.ar";
+  const SITE_TITLE = "SESC — Servicios Eléctricos Integrales en Córdoba | Electricidad, Cámaras, Energía Solar";
+  const SITE_DESCRIPTION =
+    "Empresa de servicios eléctricos en Córdoba con más de 20 años de experiencia. Instalaciones eléctricas industriales, residenciales y comerciales, cámaras de seguridad, alarmas, paneles solares, cargadores para autos eléctricos y trabajos en altura. Presupuesto sin cargo.";
+
   return (
     <main class="text-center mx-auto bg-zinc-800">
+      <Title>{SITE_TITLE}</Title>
+      <Meta name="description" content={SITE_DESCRIPTION} />
+      <Link rel="canonical" href={`${SITE_URL}/`} />
+      <Meta property="og:url" content={`${SITE_URL}/`} />
+      <Meta property="og:title" content={SITE_TITLE} />
+      <Meta property="og:description" content={SITE_DESCRIPTION} />
+      <Meta property="og:image" content={`${SITE_URL}/logo.png`} />
+      <Meta property="og:image:alt" content="SESC - Servicios Eléctricos Integrales" />
+      <Meta name="twitter:title" content={SITE_TITLE} />
+      <Meta name="twitter:description" content={SITE_DESCRIPTION} />
+      <Meta name="twitter:image" content={`${SITE_URL}/logo.png`} />
       <section class="h-screen relative justify-center items-center flex" aria-label="Inicio">
         <img
           class="object-cover h-full w-full absolute brightness-75 opacity-90 blur-sm"
@@ -84,7 +101,7 @@ export default function Home() {
           role="presentation"
           loading="lazy"
         />
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full max-w-7xl px-6 sm:px-10 lg:px-12 xl:px-16 z-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full max-w-7xl px-6 sm:px-10 lg:px-12 xl:px-16 z-10">
           <For each={Array.from(servicesMap.entries())}>
             {([name, service], index) => (
               <ServiceItem

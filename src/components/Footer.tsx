@@ -24,6 +24,7 @@ export default function Footer() {
           <A href="/seguridad-electronica" class="text-sm text-zinc-300 hover:text-orange-400 transition-colors">Seguridad Electrónica</A>
           <A href="/energia-solar" class="text-sm text-zinc-300 hover:text-orange-400 transition-colors">Energías Renovables</A>
           <A href="/movilidad-electrica" class="text-sm text-zinc-300 hover:text-orange-400 transition-colors">Movilidad Eléctrica</A>
+          <A href="/trabajos-en-altura" class="text-sm text-zinc-300 hover:text-orange-400 transition-colors">Trabajos en Altura</A>
         </nav>
 
         <div class="flex flex-col items-center sm:items-start gap-3">

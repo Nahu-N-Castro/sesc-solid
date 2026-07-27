@@ -8,9 +8,11 @@ Estas son las tareas **manuales** que hay que hacer fuera del código para que e
 
 - Metadatos completos (title, description, canonical, lang="es-AR")
 - Open Graph + Twitter Cards
-- JSON-LD: `LocalBusiness`, `Electrician`, `WebSite`, `FAQPage` + `aggregateRating` 5.0/41
-- `robots.txt` + `sitemap.xml` (5 URLs)
-- 4 páginas por servicio (`/electricidad`, `/seguridad-electronica`, `/energia-solar`, `/climatizacion`) con SEO propio
+- JSON-LD: `LocalBusiness`, `Electrician`, `WebSite`, `FAQPage` + `aggregateRating` 5.0/41 (hasOffer incluye los 5 servicios)
+- `robots.txt` + `sitemap.xml` (6 URLs)
+- 5 páginas por servicio (`/electricidad`, `/seguridad-electronica`, `/energia-solar`, `/movilidad-electrica`, `/trabajos-en-altura`) con SEO propio
+- Galería "Fotos de campo" con fotos reales de obra en `/trabajos-en-altura` (extensible al resto)
+- Redirect 301 de `/climatizacion` (servicio dado de baja) → `/electricidad`
 - Imágenes optimizadas a WebP (~70% menos peso)
 - Performance: preload del LCP, lazy loading, fuentes optimizadas
 - Accesibilidad WCAG (alts, aria-labels, focus-visible, prefers-reduced-motion)
@@ -33,8 +35,9 @@ Sin esto, Google tarda más en indexar y no tenés métricas.
    - O **Archivo HTML** → te da un archivo → lo subimos a `public/`
 4. Una vez verificado:
    - Sitemaps → agregar `sitemap.xml` → enviar.
-   - Inspección de URL → pegar cada una de las 5 URLs → "Solicitar indexación".
+   - Inspección de URL → pegar cada una de las 6 URLs → "Solicitar indexación".
 5. Resultado esperado: 24–72hs aparece todo en Google.
+6. **Si Search Console ya estaba configurado**: solicitar indexación de la URL nueva `https://www.sesc.com.ar/trabajos-en-altura` (y re-enviar el sitemap para que tome el cambio).
 
 ### 2. Google Business Profile
 
@@ -44,12 +47,12 @@ Lo más importante para SEO local. Es lo que aparece a la derecha cuando buscan 
 2. **Reclamar** el listing existente (ya tenés reseñas en Maps con el nombre "Servicio Especializado SC | Instalaciones Eléctricas Certificadas").
 3. Completar:
    - Categoría primaria: **Electricista**
-   - Categorías secundarias: **Empresa de paneles solares**, **Servicio de instalación de cámaras de seguridad**, **Servicio de calefacción**
+   - Categorías secundarias: **Empresa de paneles solares**, **Servicio de instalación de cámaras de seguridad**, **Estación de carga de vehículos eléctricos** (si aplica como servicio), **Contratista eléctrico**
    - Sitio web: `https://www.sesc.com.ar/`
    - Teléfono: `+54 351 2922784`
    - Horarios reales
    - Zona de servicio: Córdoba Capital + localidades que cubren
-4. Subir 10–15 fotos de trabajos hechos (usar las mismas de `/jobs/` pero con buena calidad).
+4. Subir 10–15 fotos de trabajos hechos (usar las mismas de `/jobs/` pero con buena calidad). Sumar las fotos del hidroelevador (`/campo/`) — las fotos de equipo propio dan mucha confianza en el perfil.
 5. Escribir descripción de 750 caracteres con keywords:
    - "electricista matriculado", "Córdoba", "instalaciones industriales", "paneles solares", "cámaras de seguridad", "20 años de experiencia"
 
@@ -69,7 +72,8 @@ Repetir el test para cada página de servicio:
 - `https://www.sesc.com.ar/electricidad`
 - `https://www.sesc.com.ar/seguridad-electronica`
 - `https://www.sesc.com.ar/energia-solar`
-- `https://www.sesc.com.ar/climatizacion`
+- `https://www.sesc.com.ar/movilidad-electrica`
+- `https://www.sesc.com.ar/trabajos-en-altura`
 
 ### 4. Pedir reseñas a clientes activos
 
@@ -166,9 +170,10 @@ Ideas iniciales con potencial alto:
 - "Cuánto cuesta instalar paneles solares en Córdoba en 2026" (long-tail informacional)
 - "Diferencia entre instalación monofásica y trifásica para PYMES"
 - "Checklist eléctrico antes de comprar una casa"
-- "Cómo dimensionar un aire acondicionado según los m² del ambiente"
 - "Hikvision vs Dahua: qué cámaras de seguridad elegir"
 - "Cuándo necesito un electricista matriculado y cómo verificarlo"
+- "Qué necesitás para instalar un cargador de auto eléctrico en casa (y acceder a la tarifa de EPEC)"
+- "Cuánto cuesta iluminar una cancha de tenis o pádel con LED en Córdoba"
 
 Cada post de 800–1500 palabras, con imágenes propias.
 
@@ -179,14 +184,21 @@ Keywords primarias (alto volumen, alta competencia):
 - instalación eléctrica Córdoba
 - paneles solares Córdoba
 - cámaras de seguridad Córdoba
+- cargador auto eléctrico Córdoba
+- trabajos en altura Córdoba
 
 Long-tail (más fácil rankear, conversión más alta):
 - electricista matriculado Córdoba
 - instalación cámaras Hikvision Córdoba
 - panel solar OnGrid Córdoba precio
-- bomba de calor para piscina Córdoba
 - certificación eléctrica 10kva Córdoba
 - electricista urgencias Córdoba 24hs
+- instalación cargador auto eléctrico ERSEP Córdoba
+- tarifa EPEC movilidad eléctrica certificado
+- hidroelevador Córdoba
+- iluminación deportiva canchas Córdoba
+- iluminación LED cancha de tenis / pádel Córdoba
+- mantenimiento alumbrado barrios privados Córdoba
 
 Buscarlas en Google cada 2 semanas (en incógnito) y anotar la posición de SESC.
 
@@ -218,6 +230,8 @@ Crear un Google Sheet con estas filas:
 | Clicks teléfono | GA4 evento | — | | | |
 | Posición "electricista Córdoba" | Búsqueda manual | — | | | |
 | Posición "paneles solares Córdoba" | Búsqueda manual | — | | | |
+| Posición "cargador auto eléctrico Córdoba" | Búsqueda manual | — | | | |
+| Posición "trabajos en altura Córdoba" | Búsqueda manual | — | | | |
 
 ---
 

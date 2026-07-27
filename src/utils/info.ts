@@ -2,7 +2,8 @@ export type ServicesType =
   | "Electricidad Integral"
   | "Seguridad Electrónica"
   | "Energias Renovables"
-  | "Movilidad Eléctrica";
+  | "Movilidad Eléctrica"
+  | "Trabajos en Altura";
 
 export type ServiceDetail = {
   icon: string;
@@ -84,6 +85,29 @@ export const servicesMap = new Map<ServicesType, ServiceDetail[]>([
         title: "Cerco Eléctrico",
         description:
           "Existen muchos sistemas de detección de intrusos, sin embargo, la experiencia ha demostrado que el Cerco Eléctrico Perimetral es el mejor sistema a instalar por ser el único que permite detectar e impedir el ingreso de delincuentes antes de que estén dentro de su propiedad. Es una barrera física y clara para disuadir al intruso, resaltada por la utilización de cartelería de advertencia. La visualización del cerco y los golpes eléctricos son suficientes para evitar el ingreso de delincuentes a su propiedad. A diferencia de las alarmas convencionales que se activan una vez que el intruso esta adentro, los cercos eléctricos constan de un tendido de alambre de aluminio de 6 hilos según el lugar a proteger, mas un electrificador alarma que transmite pulsos de alto voltaje pero de bajo amperaje, que al ser tocado genera un doloroso choque eléctrico inmovilizando al intruso, NO LETAL.",
+      },
+    ],
+  ],
+  [
+    "Trabajos en Altura",
+    [
+      {
+        icon: "trabajos-altura-1.webp",
+        title: "Iluminación Deportiva",
+        description:
+          "Proyectamos, instalamos y renovamos la iluminación de canchas de tenis, pádel, fútbol y predios deportivos. Recambio de proyectores a tecnología LED, orientación y enfoque de artefactos, y mantenimiento de columnas y estructuras. Con nuestro hidroelevador trabajamos directamente sobre la cancha, de forma rápida y segura, sin dañar la superficie de juego.",
+      },
+      {
+        icon: "campo/altura-3.webp",
+        title: "Hidroelevador hasta 11 m",
+        description:
+          "Contamos con hidroelevador propio con alcance de hasta 11 metros y personal habilitado para trabajo en altura, con elementos de seguridad certificados. Mantenimiento de alumbrado público y privado en calles, barrios privados, playones e industrias, con recambio de luminarias a LED para reducir el consumo.",
+      },
+      {
+        icon: "trabajos-altura-4.webp",
+        title: "Postes y Líneas",
+        description:
+          "Ejecutamos acometidas, tendidos aéreos, reparaciones y adecuaciones sobre postes y líneas de baja tensión. Colocación y recambio de postes, brazos y crucetas, retiro de instalaciones fuera de servicio y montaje de equipamiento en altura, con cobertura en toda la provincia de Córdoba.",
       },
     ],
   ],

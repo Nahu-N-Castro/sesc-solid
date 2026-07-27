@@ -74,6 +74,13 @@ export default function Nav() {
             MOVILIDAD ELÉCTRICA
           </A>
           <A
+            href="/trabajos-en-altura"
+            onClick={closeMenu}
+            class="hidden lg:flex md:px-3 md:py-2 md:rounded-md border-2 border-transparent hover:border-orange-500 transition-all"
+          >
+            TRABAJOS EN ALTURA
+          </A>
+          <A
             href={linkTo("targetContact")}
             onClick={handleAnchorClick("targetContact")}
             class="hidden lg:flex md:px-3 md:py-2 md:rounded-md border-2 border-transparent hover:border-orange-500 transition-all"
@@ -140,6 +147,7 @@ export default function Nav() {
                 <A href="/seguridad-electronica" onClick={closeMenu} class="text-base text-white/80 text-center py-2 hover:text-orange-500">Seguridad Electrónica</A>
                 <A href="/energia-solar" onClick={closeMenu} class="text-base text-white/80 text-center py-2 hover:text-orange-500">Energías Renovables</A>
                 <A href="/movilidad-electrica" onClick={closeMenu} class="text-base text-white/80 text-center py-2 hover:text-orange-500">Movilidad Eléctrica</A>
+                <A href="/trabajos-en-altura" onClick={closeMenu} class="text-base text-white/80 text-center py-2 hover:text-orange-500">Trabajos en Altura</A>
               </div>
               <div class="flex justify-center gap-4 mx-5 mt-8 pt-5 border-t border-white/20">
                 <a

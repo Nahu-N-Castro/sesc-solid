@@ -1,8 +1,11 @@
 import { A } from "@solidjs/router";
+import { Title, Meta } from "@solidjs/meta";
 
 export default function NotFound() {
   return (
     <main class="flex flex-col items-center justify-center min-h-screen text-center mx-auto bg-zinc-800 text-white p-8">
+      <Title>Página no encontrada | SESC</Title>
+      <Meta name="robots" content="noindex" />
       <h1 class="text-7xl sm:text-9xl font-bold text-orange-500 mb-6">404</h1>
       <h2 class="text-2xl sm:text-4xl font-semibold mb-4">Página no encontrada</h2>
       <p class="text-stone-300 mb-10 max-w-md">

@@ -12,6 +12,8 @@ export default function MovilidadElectricaPage() {
       <Meta property="og:title" content={service.metaTitle} />
       <Meta property="og:description" content={service.metaDescription} />
       <Meta property="og:url" content={`https://www.sesc.com.ar/${service.slug}`} />
+      <Meta property="og:image" content={`https://www.sesc.com.ar${service.hero.image}`} />
+      <Meta property="og:image:alt" content={service.title} />
       <ServicePageLayout service={service} />
     </>
   );
