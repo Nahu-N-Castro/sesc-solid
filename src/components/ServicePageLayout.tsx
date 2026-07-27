@@ -209,22 +209,34 @@ export default function ServicePageLayout(props: { service: ServicePage }) {
 
       <section class="py-14 lg:py-20 px-6 sm:px-12 bg-zinc-900">
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-white mb-8 lg:mb-12">Otros servicios</h2>
-        <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5">
           <For each={servicePagesList.filter((s) => s.slug !== props.service.slug)}>
             {(other) => (
               <A
                 href={`/${other.slug}`}
-                class="group relative aspect-video rounded-xl overflow-hidden border border-zinc-700 hover:border-orange-500 transition-all"
+                class="group flex items-center bg-zinc-800 border border-zinc-700 hover:border-orange-500 rounded-xl overflow-hidden transition-colors"
               >
                 <img
-                  src={other.hero.image}
+                  src={other.cardImage ?? other.hero.image}
                   alt={other.title}
                   loading="lazy"
-                  class="w-full h-full object-cover brightness-50 group-hover:brightness-75 group-hover:scale-105 transition-all duration-500"
+                  class="w-24 h-24 sm:w-28 sm:h-28 object-cover shrink-0"
                 />
-                <span class="absolute inset-0 flex items-center justify-center text-white font-bold text-xl">
-                  {other.title}
-                </span>
+                <div class="flex-1 min-w-0 px-4 sm:px-5 py-3 text-left">
+                  <h3 class="text-white font-bold text-base sm:text-lg truncate">{other.title}</h3>
+                  <p class="text-zinc-400 text-sm truncate">{other.shortDescription}</p>
+                  <span class="text-orange-400 text-sm font-bold inline-block mt-1">Ver más</span>
+                </div>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  class="w-5 h-5 text-orange-500 mr-4 sm:mr-5 shrink-0 group-hover:translate-x-1 transition-transform"
+                  aria-hidden="true"
+                >
+                  <path d="m9 6 6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
               </A>
             )}
           </For>

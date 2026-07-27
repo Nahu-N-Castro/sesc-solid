@@ -3,6 +3,12 @@ export type ServicePage = {
   title: string;
   metaTitle: string;
   metaDescription: string;
+  /** Descripción de 1-2 líneas para la card de "Nuestros Servicios" en la home. */
+  cardDescription: string;
+  /** Descripción de una línea para las mini-cards de "Otros servicios". */
+  shortDescription: string;
+  /** Imagen para cards (fallback: hero.image). */
+  cardImage?: string;
   hero: {
     image: string;
     /** Video de fondo opcional (mp4 corto, sin audio). La imagen queda de poster/fallback. */
@@ -36,6 +42,9 @@ export const servicePages: Record<string, ServicePage> = {
       "Electricidad Integral en Córdoba | Industrial, Residencial y Comercial - SESC",
     metaDescription:
       "Servicios eléctricos integrales en Córdoba: instalaciones industriales, residenciales y comerciales, tableros BT, luminarias, certificaciones eléctricas hasta 10KVA y mantenimiento preventivo.",
+    cardDescription:
+      "Instalaciones industriales, residenciales y comerciales. Tableros BT, luminarias y certificaciones hasta 10KVA.",
+    shortDescription: "Instalaciones, tableros y certificaciones",
     hero: {
       image: "/industrial.webp",
       headline: "Electricidad Integral",
@@ -78,6 +87,8 @@ export const servicePages: Record<string, ServicePage> = {
       "Cámaras de Seguridad y Alarmas en Córdoba | Hikvision, Dahua - SESC",
     metaDescription:
       "Instalación de cámaras de seguridad IP y analógicas, alarmas, cercos eléctricos perimetrales en Córdoba. Marcas Dahua y Hikvision, instalación profesional con garantía.",
+    cardDescription: "Cámaras, alarmas y cercos eléctricos perimetrales.",
+    shortDescription: "Cámaras, alarmas y cercos perimetrales",
     hero: {
       image: "/camaras.webp",
       headline: "Seguridad Electrónica",
@@ -120,6 +131,8 @@ export const servicePages: Record<string, ServicePage> = {
       "Paneles Solares en Córdoba | OnGrid, OffGrid e Híbridos - SESC",
     metaDescription:
       "Instalación de paneles solares en Córdoba. Sistemas fotovoltaicos OnGrid, OffGrid e Híbridos. Asesoría técnica, dimensionamiento, vida útil 25-30 años, amortización razonable.",
+    cardDescription: "Sistemas fotovoltaicos OnGrid, OffGrid e híbridos.",
+    shortDescription: "Paneles solares OnGrid, OffGrid e híbridos",
     hero: {
       image: "/panel.webp",
       headline: "Energías Renovables",
@@ -157,6 +170,8 @@ export const servicePages: Record<string, ServicePage> = {
       "Cargadores para Autos Eléctricos en Córdoba | Monofásico y Trifásico - SESC",
     metaDescription:
       "Instalación de cargadores para autos eléctricos en Córdoba. Monofásico y trifásico, todas las marcas. Certificado habilitante para tarifa bonificada de EPEC, análisis de factibilidad y Apto Eléctrico ERSEP. Cobertura provincial.",
+    cardDescription: "Cargadores para autos eléctricos con certificado ERSEP.",
+    shortDescription: "Cargadores para autos eléctricos",
     hero: {
       image: "/movilidad-electrica-1.webp",
       headline: "Movilidad Eléctrica",
@@ -216,6 +231,9 @@ export const servicePages: Record<string, ServicePage> = {
       "Trabajos en Altura con Hidroelevador en Córdoba | Iluminación Deportiva y Alumbrado - SESC",
     metaDescription:
       "Trabajos en altura con hidroelevador propio de hasta 11 metros en Córdoba: iluminación deportiva LED para canchas y clubes, mantenimiento de alumbrado público y privado, acometidas y trabajos sobre postes y líneas. Personal habilitado, presupuesto sin cargo.",
+    cardDescription: "Hidroelevador propio, iluminación deportiva y alumbrado.",
+    shortDescription: "Hidroelevador, iluminación y alumbrado",
+    cardImage: "/campo/altura-1.webp",
     hero: {
       image: "/trabajos-altura-1.webp",
       video: "/trabajos-altura-hero.mp4",

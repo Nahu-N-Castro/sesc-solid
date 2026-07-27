@@ -12,10 +12,11 @@ import InstagramFeed from "~/components/InstagramFeed";
 import JoinTeam from "~/components/JoinTeam";
 import Process from "~/components/Process";
 import ScrollCarousel from "~/components/ScrollCarousel";
-import ServiceItem from "~/components/ServiceItem";
+import ServiceCard from "~/components/ServiceCard";
 import TestimonialItem from "~/components/TestimonialItem";
 import WhatsAppFloat from "~/components/WhatsAppFloat";
-import { servicesMap, testimonials } from "~/utils/info";
+import { testimonials } from "~/utils/info";
+import { servicePages } from "~/utils/services-pages";
 import AOS from "aos";
 import { createEffect, onMount } from "solid-js";
 import { useLocation } from "@solidjs/router";
@@ -93,7 +94,8 @@ export default function Home() {
         class="h-full relative flex flex-col justify-center items-center bg-zinc-800 py-20"
         aria-labelledby="services-heading"
       >
-        <h2 id="services-heading" class="font-bold pb-12 lg:pb-20 z-10 text-3xl sm:text-4xl lg:text-5xl text-white cursor-default">Nuestros Servicios</h2>
+        <h2 id="services-heading" class="font-bold pb-3 z-10 text-3xl sm:text-4xl lg:text-5xl text-white cursor-default">Nuestros Servicios</h2>
+        <p class="z-10 text-zinc-400 pb-10 lg:pb-14 px-6">Más de 20 años resolviendo proyectos eléctricos en Córdoba.</p>
         <img
           class="object-cover blur-sm h-full w-full absolute brightness-90"
           src="linea2.webp"
@@ -101,16 +103,12 @@ export default function Home() {
           role="presentation"
           loading="lazy"
         />
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full max-w-7xl px-6 sm:px-10 lg:px-12 xl:px-16 z-10">
-          <For each={Array.from(servicesMap.entries())}>
-            {([name, service], index) => (
-              <ServiceItem
-                service={service}
-                label={name}
-                index={index() * 4}
-              />
-            )}
-          </For>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl px-6 sm:px-10 z-10">
+          <ServiceCard service={servicePages["electricidad"]} index={0} class="sm:col-span-2" />
+          <ServiceCard service={servicePages["seguridad-electronica"]} index={1} />
+          <ServiceCard service={servicePages["energia-solar"]} index={2} />
+          <ServiceCard service={servicePages["movilidad-electrica"]} index={3} />
+          <ServiceCard service={servicePages["trabajos-en-altura"]} index={4} />
         </div>
       </section>
 
